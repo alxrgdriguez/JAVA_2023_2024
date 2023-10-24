@@ -1,4 +1,3 @@
-package EJERCICIOS_CONTROL_DE_EXCEPCIONES;
 
 import java.util.Scanner;
 

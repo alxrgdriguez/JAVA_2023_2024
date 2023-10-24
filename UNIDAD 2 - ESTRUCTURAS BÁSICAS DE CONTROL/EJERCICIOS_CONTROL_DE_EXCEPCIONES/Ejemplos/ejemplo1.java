@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class ejemplo1{
+class EjercicioClase{
 
     /*
      * int --> Integer || Integer.parseInt(String) //Ejecutar enteros con nextLine
