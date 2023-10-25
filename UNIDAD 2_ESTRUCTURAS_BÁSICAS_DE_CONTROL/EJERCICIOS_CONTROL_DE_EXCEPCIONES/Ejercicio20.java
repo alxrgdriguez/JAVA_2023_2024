@@ -16,9 +16,11 @@ public class Ejercicio20 {
         int maximo = Integer.MIN_VALUE;
         int minimo = Integer.MAX_VALUE;
 
+        
         // Pedir al usuario que ingrese la cantidad de números
         System.out.print("Ingrese la cantidad de números: ");
         N = sc.nextInt();
+
 
         // Verificar que N sea positivo
         while (N <= 0) {
@@ -27,10 +29,9 @@ public class Ejercicio20 {
             N = sc.nextInt();
         }
 
+        for (int i = 1; i <= N; i++){
 
-        // Pedir al usuario que ingrese N números y realizar cálculos básicos
-        for (int i = 0; i < N; i++) {
-            System.out.print("Ingrese un numero: ");
+            System.out.println("Ingrese un numero: ");
             numero = sc.nextInt();
 
             //Hacer la suma de los numeros 
@@ -43,7 +44,8 @@ public class Ejercicio20 {
             if (numero < minimo) {
                 minimo = numero;
             }
-        }
+
+         }
 
         // Calcular la media
         double media = (double) suma / N;
@@ -53,10 +55,11 @@ public class Ejercicio20 {
         System.out.println("Mayor: " + maximo);
         System.out.println("Menor: " + minimo);
 
-        // Cerrar el scanner
-        sc.close();
+       
     }
 }
+
+
     
 
     
