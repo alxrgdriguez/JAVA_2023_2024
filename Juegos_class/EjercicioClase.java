@@ -32,8 +32,8 @@ public class EjercicioClase {
        
 
 
-        try{
-        numTurnos = Integer.parseInt(sc.nextLine());
+        try{Integer.parseInt(sc.nextLine());
+        numTurnos = 
         
         if (numTurnos <= 0){
 
