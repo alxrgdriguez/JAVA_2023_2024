@@ -2,7 +2,7 @@ package EJERCICIOS_CONDICIONES_BUCLES_TEMA2;
 
 import java.util.Scanner;
 
-public class Ejercicio17 {
+public class Ejercicio_17 {
 
     public static void main(String[] args) {
         

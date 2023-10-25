@@ -1,6 +1,6 @@
 package EJERCICIOS_BUCLES_TEMA2;
 import java.util.Scanner;
-public class Ejercicio5 {
+public class Ejercicio_5 {
 
     public static void main(String[] args) {
         

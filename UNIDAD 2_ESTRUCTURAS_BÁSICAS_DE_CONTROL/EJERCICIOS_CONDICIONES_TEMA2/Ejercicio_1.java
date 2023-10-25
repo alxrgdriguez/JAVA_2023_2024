@@ -2,7 +2,7 @@ package EJERCICIOS_CONDICIONES_TEMA2;
 
 import java.util.Scanner;
 
-public class Ejercicio1 {
+public class Ejercicio_1 {
 
 
     public static int mayor(int a, int b, int c){

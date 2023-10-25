@@ -1,6 +1,6 @@
 package EJERCICIOS_CONDICIONES_TEMA2;
 import java.util.Scanner;
-public class Ejercicio3 {
+public class Ejercicio_3 {
 
     public static void main(String[] args) {
         

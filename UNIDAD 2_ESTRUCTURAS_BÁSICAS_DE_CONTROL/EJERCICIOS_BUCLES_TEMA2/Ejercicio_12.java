@@ -1,6 +1,6 @@
 package EJERCICIOS_BUCLES_TEMA2;
 
-class Ejercicio12 {
+class Ejercicio_12 {
 
     public static void main(String[] args) {
         

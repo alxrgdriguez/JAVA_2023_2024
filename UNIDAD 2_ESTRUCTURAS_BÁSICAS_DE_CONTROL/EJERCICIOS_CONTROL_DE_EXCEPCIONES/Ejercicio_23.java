@@ -26,6 +26,8 @@ class Ejercicio_23 {
         }
 
         // Imprimimos la fecha del día siguiente
-        System.out.println("La fecha del día siguiente es: " + diaSiguiente + "/" + mes + "/" + anio);
+        System.out.println("La fecha del día siguiente es: " + (diaSiguiente - 1) + "/" + mes + "/" + anio);
+
+        sc.close();
     }
 }

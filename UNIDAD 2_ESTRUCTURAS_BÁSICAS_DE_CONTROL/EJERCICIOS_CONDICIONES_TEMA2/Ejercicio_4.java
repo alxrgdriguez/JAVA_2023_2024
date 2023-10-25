@@ -2,7 +2,7 @@ package EJERCICIOS_CONDICIONES_TEMA2;
 
 import java.util.Scanner;
 
-public class Ejercicio4 {
+public class Ejercicio_4 {
 
 
     public static void billetera(int cant){
