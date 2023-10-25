@@ -32,7 +32,7 @@ public class EjercicioClase {
        
 
 
-        try{Integer.parseInt(sc.nextLine());
+        try{
         numTurnos = 
         
         if (numTurnos <= 0){

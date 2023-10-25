@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Ejercicio_20 {
@@ -55,7 +54,7 @@ public class Ejercicio_20 {
         System.out.println("Mayor: " + maximo);
         System.out.println("Menor: " + minimo);
 
-       
+       sc.close();
     }
 }
 
