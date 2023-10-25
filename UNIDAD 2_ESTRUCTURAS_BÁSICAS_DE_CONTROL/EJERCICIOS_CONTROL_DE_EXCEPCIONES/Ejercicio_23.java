@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio23 {
+class Ejercicio_23 {
 
     public static void main(String[] args) {
         // Declaramos las variables para almacenar la fecha introducida
