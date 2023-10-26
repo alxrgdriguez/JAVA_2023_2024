@@ -1,4 +1,3 @@
-package Juegos_clase;
 
 import java.util.Scanner;
 
