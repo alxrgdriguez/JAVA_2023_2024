@@ -2,48 +2,45 @@ import java.util.Scanner;
 
 public class Ejercicio24 {
 
-    public static void main(String[] args) {
-        // Pedimos al usuario que piense un número entre el 1 y el 100.
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Piensa un número entre el 1 y el 100: ");
-        int numeroPensado = sc.nextInt();
+    public static int numaleatorio(int min, int max) throws Exception{
 
-        // Realizamos la búsqueda binaria.
-        int intentos = busquedaBinaria(numeroPensado);
+        if (min > max){
 
-        // Imprimimos el número de intentos necesarios.
-        System.out.println("¡Encontrado! El número que has pensado es " + numeroPensado + ". Se han realizado "
-                + intentos + " intentos.");
-    }
+            throw new Exception("El valor minimo no puede ser mayor que el maximo");
 
-    // Busca un número pensado por el usuario utilizando el algoritmo de búsqueda
-    // binaria.
-
-    public static int busquedaBinaria(int numeroPensado) {
-        // El rango de números a buscar.
-        int min = 1;
-        int max = 100;
-        int intentos = 0;
-
-        // Mientras el rango no esté vacío, continuamos buscando.
-        while (min <= max) {
-            // El número medio del rango.
-            int medio = (min + max) / 2;
-
-            // Preguntamos al usuario si el número que ha pensado es menor, igual o mayor al
-            // número medio.
-            if (numeroPensado == medio) {
-                return intentos;
-            } else if (numeroPensado < medio) {
-                max = medio - 1;
-            } else {
-                min = medio + 1;
-            }
-
-            intentos++;
         }
 
-        // Si el rango está vacío, significa que no se ha encontrado el número.
-        return intentos;
+        return (int) (Math.random() * (max - min + 1) + min);
+
     }
+
+    public static void main(String[] args) {
+        //Piensa un numero
+        //El pc genera un numero aleatorio entre 1 y 100
+        //Yo le digo si es mayor o menor que el que pensando
+        //El PC genera  un numeroo aleatorio entre (1. generado) o (generado,100)
+        //Repetir hasta acertar
+
+
+        int numeroActual = 0;
+        int opcion = 0;
+
+        Scanner sc = new Scanner(System.in);
+
+         System.out.println("Piensa un número entre el 1 y el 100: ");
+
+        try {
+           
+            numeroActual = numaleatorio(1, 100);
+            System.out.println("¿Es tu numero el " + numeroActual + " ?");
+            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
+
+        
+
+}
+
 }
