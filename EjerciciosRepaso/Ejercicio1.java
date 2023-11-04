@@ -43,5 +43,7 @@ public class Ejercicio1 {
         
         System.out.println("Has introducido " + contador + " numeros");
         System.out.println("La suma de los numeros es " + suma);
+
+        sc.close();
     }
 }
