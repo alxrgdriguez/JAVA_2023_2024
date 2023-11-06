@@ -1,4 +1,4 @@
-package EjerciciosRepaso;
+package EjerciciosRepaso_UT2;
 
 public class Ejercicio3 {
 
