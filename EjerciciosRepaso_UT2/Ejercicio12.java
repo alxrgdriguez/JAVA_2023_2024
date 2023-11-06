@@ -1,5 +1,7 @@
 package EjerciciosRepaso_UT2;
 
+
+
 public class Ejercicio12 {
 
     public static int numaleatorio(int min, int max) {
