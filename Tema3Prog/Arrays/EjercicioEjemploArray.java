@@ -33,15 +33,16 @@ public class EjercicioEjemploArray {
         for (int i = 0; i < salarios.length; i++){
 
             acumulador += salarios[i];
-            //Mostrar la suma
-            System.out.println("El trabajador  " + (i+1) + " tiene un salario de " + salarios[i] + "€");
+            //Mostrar la suma de los salarios
+            System.out.println("El trabajador " + (i+1) + " tiene un salario de " + salarios[i] + "€");
             System.out.println();
 
         }
 
         //Media de los salarios
-        System.out.println("La media es de " + acumulador / salarios.length);
+        System.out.println("La media es de " + acumulador / salarios.length + "€");
 
+        sc.close();
     }
     
 }
