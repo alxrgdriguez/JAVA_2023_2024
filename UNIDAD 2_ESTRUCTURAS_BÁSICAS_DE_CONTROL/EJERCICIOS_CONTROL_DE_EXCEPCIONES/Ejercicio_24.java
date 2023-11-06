@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio24 {
+public class Ejercicio_24 {
 
     public static int numaleatorio(int min, int max) throws Exception{
 
