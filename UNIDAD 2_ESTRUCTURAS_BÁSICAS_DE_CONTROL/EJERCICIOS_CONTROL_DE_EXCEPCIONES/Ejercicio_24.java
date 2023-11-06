@@ -36,11 +36,8 @@ public class Ejercicio_24 {
             
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        }
-        
+        }    
 
-        
-
-}
+    }
 
 }
