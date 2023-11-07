@@ -18,7 +18,7 @@ public class CosteAlumnos {
 
         }else if (num_Alumnos >=50 && num_Alumnos <=99){
 
-            Coste_Total = (num_Alumnos * 70)
+            Coste_Total = (num_Alumnos * 70);
         }
         
 
