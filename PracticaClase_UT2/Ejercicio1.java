@@ -1,4 +1,4 @@
-package PracticaClase;
+package PracticaClase_UT2;
 
 import java.util.Scanner;
 
