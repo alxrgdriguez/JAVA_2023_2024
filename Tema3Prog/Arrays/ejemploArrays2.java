@@ -1,7 +1,7 @@
 package Tema3Prog.Arrays;
 
 
-public class ejemploArrays {
+public class ejemploArrays2 {
 
   public static int numaleatorio(int min, int max) {
 
