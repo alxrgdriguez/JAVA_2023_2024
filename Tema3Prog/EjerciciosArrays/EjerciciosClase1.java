@@ -14,10 +14,9 @@ public class EjerciciosClase1 {
 
          for(int i = 0; i < numeros.length; i++){
 
-            numeros[i] = 1;
+            Arrays.fill(numeros, 1);
          }
 
-        
         
         for(int i = 0; i < numeros.length; i++){
 
@@ -30,8 +29,6 @@ public class EjerciciosClase1 {
 
         }
 
-
-         System.out.println(Arrays.toString(numeros));
 
          System.out.println(Arrays.toString(numeros));
          
