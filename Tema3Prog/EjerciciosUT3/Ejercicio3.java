@@ -1,6 +1,5 @@
 package Tema3Prog.EjerciciosUT3;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
