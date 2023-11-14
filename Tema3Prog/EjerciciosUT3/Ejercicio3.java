@@ -23,7 +23,7 @@ public class Ejercicio3 {
          */
 
 
-         Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         int tamanio = 0;
         int digito = -1;
