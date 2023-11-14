@@ -13,14 +13,14 @@ public class Ejercicio4 {
 
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         int n = 1;
 
         do {
             // Solicitar el número de personas (N)
             System.out.print("Ingrese el número de personas (N): ");
-            n = scanner.nextInt();
+            n = Integer.parseInt(sc.nextLine());
 
             // Validar que N sea un entero positivo
             if (n <= 0) {
@@ -35,11 +35,12 @@ public class Ejercicio4 {
         // Solicitar las alturas de cada persona
         for (int i = 0; i < n; i++) {
             System.out.print("Ingrese la altura de la persona " + (i + 1) + " (en cm): ");
-            alturas[i] = scanner.nextDouble();
+            alturas[i] = Double.parseDouble(sc.nextLine());
         }
 
         // Calcular la altura media
         double sumaAlturas = 0;
+        
         
         double alturaMedia = sumaAlturas / n;
 
@@ -62,10 +63,10 @@ public class Ejercicio4 {
         System.out.println("\nResultados:");
         System.out.println("Altura media: " + alturaMedia + " cm");
         System.out.println("Las personas con altura superior a la media son: " + personasSuperiorMedia);
-        System.out.println("Las personas con altura inferior a la media sonnnnnn: " + personasInferiorMedia);
+        System.out.println("Las personas con altura inferior a la media son: " + personasInferiorMedia);
 
         // Cerrar el scanner
-        scanner.close();
+        sc.close();
     }
 }
 
