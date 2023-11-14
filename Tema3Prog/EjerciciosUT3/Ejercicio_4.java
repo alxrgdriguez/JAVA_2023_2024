@@ -59,7 +59,34 @@ public class Ejercicio_4 {
 
     //Calculamos la media de las alturas
 
-    alturaMedia = sumaAlturas / alturas.length; //O alturaMedia = sumaAlturas / N;
+    alturaMedia = sumaAlturas / alturas.length; //Tambien se podría hacer: alturaMedia = sumaAlturas / N;
+
+    //Calcular cuántas personas tienen una
+    //altura superior a la media y cuántas tienen una altura inferior a la media
+
+    int contadorSuperior = 0;
+    int contadorInferior = 0;
+
+
+    for (int i = 0; i < alturas.length; i++) {
+
+        if(alturas[i] > alturaMedia){
+
+            contadorSuperior++;
+
+        }else if (alturas[i] < alturaMedia){
+
+            contadorInferior++;
+        }
+        
+    }
+
+    //Mostramos los resultados
+    System.out.println("\nResultados:");
+    System.out.println("La altura media es de: " + alturaMedia);
+    System.out.println("Hay "+ contadorSuperior + " personas con una altura superior a la media");
+    System.out.println("Hay " + contadorInferior + " personas con una altura inferior a la media");
+
 
     }
     
