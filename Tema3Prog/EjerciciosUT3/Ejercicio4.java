@@ -40,9 +40,7 @@ public class Ejercicio4 {
 
         // Calcular la altura media
         double sumaAlturas = 0;
-        for (double altura : alturas) {
-            sumaAlturas += altura;
-        }
+        
         double alturaMedia = sumaAlturas / n;
 
         // Contar personas con altura superior e inferior a la media
