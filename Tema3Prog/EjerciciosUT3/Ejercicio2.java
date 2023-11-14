@@ -2,7 +2,7 @@ package Tema3Prog.EjerciciosUT3;
 
 import java.util.Arrays;
 
-public class Ejercicios2 {
+public class Ejercicio2 {
 
     public static int[] devolverArrays(int[] numero) throws Exception{
 
