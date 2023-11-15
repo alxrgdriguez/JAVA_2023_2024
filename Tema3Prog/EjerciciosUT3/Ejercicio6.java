@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Ejercicio6 {
 
     public static int numaleatorio(int min, int max){
@@ -15,9 +17,11 @@ public class Ejercicio6 {
 
         for(int i = 0; i < numeros.length; i++){
 
-            numeros[i] = numaleatorio(1, 99);
+            numeros[i] = numaleatorio(1, 100);
 
         }
+
+        System.out.println(Arrays.toString(numeros));
 
 
 
