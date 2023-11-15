@@ -16,7 +16,7 @@ public class Ejercicio7 {
     int[] numeros = new int[5];
 
 
-    //Rellenamos el array pedidos por teclado
+    //Rellenamos el array pedido por teclado
     for(int i = 0; i < numeros.length; i++){
 
         System.out.println("Introduce el numero " + (i+1));
@@ -47,6 +47,27 @@ public class Ejercicio7 {
     //Mostramos los resultados el programa
     System.out.println("\nResultado:");
     System.out.println(Arrays.toString(numeros));
+
+    //Desplazando N posiciones
+
+    int[] n = new int[5];
+
+    //Rellenamos el array pedido por teclado
+    for(int i = 0; i < n.length; i++){
+
+        System.out.println("Introduce un numero (N) " + (i+1));
+        n[i] = Integer.parseInt(sc.nextLine());
+    }
+
+    System.out.println(Arrays.toString(n));
+
+    for(int i = 0; i < n.length; i++){
+
+        System.out.println("Dime el valor de (N) las posiciones que deseas desplazar el array " );
+        n[i] = Integer.parseInt(sc.nextLine());
+    }
+
+    sc.close();
 
     }
     
