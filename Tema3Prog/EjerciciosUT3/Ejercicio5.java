@@ -48,6 +48,9 @@ public class Ejercicio5 {
         System.out.println("La media es " + media);
         System.out.println("El mayor valor es " + mayor);
         System.out.println("El menor valor es " + menor);
+
+        //Cerramos el Scanner
+        sc.close();
     }
 }
 
