@@ -1,12 +1,7 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ejercicio5 {
-
-    public static int numaleatorio(int min, int max){
-
-        return (int) (Math.random() * (max - min + 1) + min);
-
-    }
 
 
     public static void main(String[] args) {
@@ -15,32 +10,46 @@ public class Ejercicio5 {
         menor valor. Usar un array para almacenar los valores y sacar toda la información en una sola iteración del array.
         Si puedes mejóralo implementando una función para cada tarea (media, mayor, menor), pasando el array. */
 
+            // Declaramos el array
         int[] numeros = new int[10];
-        int mediaNumeros = 0;
-        int sumaNumeros = 0;
 
-
-        for (int i = 0; i < numeros.length; i++){
-
-            numeros[i] = numaleatorio(1, 1);
-
-            //Calculamos la suma 
-
-            sumaNumeros += numeros[i];
-
-            //Calcular la media
-
-            mediaNumeros = sumaNumeros / numeros.length;
-
+        // Leemos los 10 números
+        Scanner sc = new Scanner(System.in);
+        
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print("Introduce el número " + (i + 1) + ": ");
+            numeros[i] = Integer.parseInt(sc.nextLine());
         }
-           
 
-        System.out.println(Arrays.toString(numeros));
-        System.out.println("La suma de todas las posciones del array es de " + sumaNumeros);
-        System.out.println("La media de la suma es de: " + mediaNumeros);
+        // Inicializamos las variables
+        int suma = 0;
+        int mayor = numeros[0];
+        int menor = numeros[0];
 
+        // Recorremos el array
+        for (int i = 0; i < numeros.length; i++) {
 
+            //Hacemos la suma de los numeros del array
+            suma += numeros[i];
+
+            //Decimos cual es el numero mayor y el numero menor
+            if (numeros[i] > mayor) {
+                mayor = numeros[i];
+            }
+            if (numeros[i] < menor) {
+                menor = numeros[i];
+            }
+        }
+
+        // Calculamos la media
+        double media = suma / numeros.length;
+
+        // Mostramos los resultados
+        System.out.println("La media es " + media);
+        System.out.println("El mayor valor es " + mayor);
+        System.out.println("El menor valor es " + menor);
     }
-
 }
+
+
  
