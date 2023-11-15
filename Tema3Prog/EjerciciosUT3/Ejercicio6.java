@@ -16,17 +16,23 @@ public class Ejercicio6 {
     //El array se mostrará asi: [el primero, el último, el segundo, el penúltimo, el tercero etc]
 
         int[] numeros = new int[10];
+        //Hacer una copia del array
 
-        //Creamos una variable temporal para guardar el valor de la posición 0 del array
-        int numTemp = numeros[0];
 
         for(int i = 0; i < numeros.length; i++){
 
-            numeros[i] = numaleatorio(1, 100);
+            numeros[i] = numaleatorio(1, 10);
 
         }
 
-        System.out.println(Arrays.toString(numeros));
+        for (int i = 0; i < numeros.length -1; i++){
+
+            System.out.println(Arrays.toString(numeros));
+            
+
+
+        }
+
 
 
 
