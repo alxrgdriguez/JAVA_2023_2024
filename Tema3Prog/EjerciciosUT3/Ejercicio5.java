@@ -17,7 +17,7 @@ public class Ejercicio5 {
         Scanner sc = new Scanner(System.in);
         
         for (int i = 0; i < numeros.length; i++) {
-            System.out.print("Introduce el número " + (i + 1) + ": ");
+            System.out.print("\nIntroduce el número " + (i + 1) + ": ");
             numeros[i] = Integer.parseInt(sc.nextLine());
         }
 
@@ -45,9 +45,11 @@ public class Ejercicio5 {
         double media = suma / numeros.length;
 
         // Mostramos los resultados
-        System.out.println("La media es " + media);
-        System.out.println("El mayor valor es " + mayor);
-        System.out.println("El menor valor es " + menor);
+        System.out.println();
+        System.out.println("\nResultados: ");
+        System.out.println("La media es: " + media);
+        System.out.println("El mayor valor es: " + mayor);
+        System.out.println("El menor valor es: " + menor);
 
         //Cerramos el Scanner
         sc.close();
