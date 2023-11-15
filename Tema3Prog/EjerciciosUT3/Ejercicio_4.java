@@ -1,5 +1,3 @@
-package Tema3Prog.EjerciciosUT3;
-
 import java.util.Scanner;
 
 public class Ejercicio_4 {
