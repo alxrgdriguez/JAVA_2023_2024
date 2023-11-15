@@ -1,4 +1,3 @@
-package Tema3Prog.EjerciciosUT3;
 import java.util.Arrays;
 
 public class Ejercicio1 {
