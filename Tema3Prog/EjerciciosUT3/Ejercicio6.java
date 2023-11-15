@@ -13,7 +13,12 @@ public class Ejercicio6 {
     /*Ejercicio 6. Generar 10 números enteros aleatorios. Debemos mostrarlos en el siguiente orden: el primero, el último, el
     segundo, el penúltimo, el tercero, etc… Pista: primero los guardas en un array y luego lo recorres como indica.*/
 
+    //El array se mostrará asi: [el primero, el último, el segundo, el penúltimo, el tercero etc]
+
         int[] numeros = new int[10];
+
+        //Creamos una variable temporal para guardar el valor de la posición 0 del array
+        int numTemp = numeros[0];
 
         for(int i = 0; i < numeros.length; i++){
 
