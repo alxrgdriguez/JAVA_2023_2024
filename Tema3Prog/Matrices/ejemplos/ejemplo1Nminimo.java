@@ -68,6 +68,7 @@ public class ejemplo1Nminimo {
             System.out.println(minimoMatriz(tabla));
 
 
+            
 
 
     }
