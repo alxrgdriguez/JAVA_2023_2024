@@ -23,7 +23,7 @@ public class ejemplo1Nminimo {
 
     public static int minimoMatriz(int matriz[][]){
 
-        int minimo = 99999;
+        int minimo = 9999999;
 
         for(int i = 0; i < matriz.length; i++){
 
