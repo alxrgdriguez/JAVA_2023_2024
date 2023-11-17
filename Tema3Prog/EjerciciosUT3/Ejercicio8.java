@@ -45,7 +45,7 @@ class Ejercicio8{
                     }
                 }
 
-                numeros[numeros.length - 1] = 0; // O el valor que desees asignar al último elemento.
+                numeros[numeros.length - 1] = 0; // O el valor que deseamos asignar al último elemento.
                 System.out.println("Elemento en la posición " + posicion + " eliminado.");
 
                  // Mostrar el array después de la eliminación.
