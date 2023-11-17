@@ -1,6 +1,6 @@
 package Tema3Prog.Matrices.ejemplos;
 
-public class ejemplo1Nmaximo {
+public class ejemplo1Nminimo {
 
     public static int numaleatorio(int min, int max){
 
@@ -23,11 +23,11 @@ public class ejemplo1Nmaximo {
 
     public static int minimoMatriz(int matriz[][]){
 
-        int minimo = 2147483647;
+        int minimo = 99999;
 
         for(int i = 0; i < matriz.length; i++){
 
-            for(int j = 0; j < matriz[0].length; i++){
+            for(int j = 0; j < matriz[0].length; j++){
 
                 //Decimos cual es el minimo
 
@@ -51,21 +51,22 @@ public class ejemplo1Nmaximo {
         
         int tabla[][] = new int[4][6];
 
-        for(int i = 0; i < tabla.length; i++){
+        for(int i = 0; i < tabla.length; i++){ //FILAS
 
-            for(int j = 0; i < tabla[0].length; i++){
+            for(int j = 0; j < tabla[0].length; j++){ //COLUMNAS
 
                 tabla[i][j] = numaleatorio(20, 100);
 
             }
 
-            //Mostramos la tabla con la función
+        }
+
+         //Mostramos la tabla con la función
             pintarMatriz(tabla);
           
             //Indicamos cual es el minimo de la tabla generada
             System.out.println(minimoMatriz(tabla));
 
-        }
 
 
 
