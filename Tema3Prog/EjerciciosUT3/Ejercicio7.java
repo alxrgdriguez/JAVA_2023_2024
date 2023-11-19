@@ -61,11 +61,32 @@ public class Ejercicio7 {
 
     System.out.println(Arrays.toString(n));
 
-    for(int i = 0; i < n.length; i++){
+    int moverN = 0;
+    System.out.println("Dime el valor de (N) las posiciones que deseas desplazar el array " );
+    moverN = Integer.parseInt(sc.nextLine());
 
-        System.out.println("Dime el valor de (N) las posiciones que deseas desplazar el array " );
-        n[i] = Integer.parseInt(sc.nextLine());
+    //Creamos un array vacio para no perder los valores del array principal
+    int[] copiaArray = new int[n.length];
+    //Contamos las casillas que nos movemos (si el contador se pasa del tamaño del array, se sigue contando a partir de 0. Ejemplo: contador=1, 2,3,4,0,1...)
+    int contador = 0;
+
+    for(int i = n.length -1; i >= 0; i--){
+       //Empezamos a contar segun la posicion del array
+       contador=i;
+
+       //Contamos las posiciones que se tiene que mover la casilla, segun la variable moverN
+       for(int j= 0; j < moverN; j++){
+        contador++;
+        //Cuando llegua al final del array, se sigue contando a partir de 0.
+        if(contador == n.length){
+            contador=0;
+        }
+       }
+       //Asignamos elemento actual a su nueva ubicacion en el array vacio.
+       copiaArray[contador] = n[i];
     }
+
+   System.out.println(Arrays.toString(copiaArray));
 
     sc.close();
 
