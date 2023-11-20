@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Ejercicio2 {
+public class T3_Ejercicio2 {
 
     public static int[] devolverArrays(int[] numero) throws Exception{
 

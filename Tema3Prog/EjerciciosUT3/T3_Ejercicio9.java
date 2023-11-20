@@ -1,4 +1,4 @@
-public class Ejercicio9 {
+public class T3_Ejercicio9 {
 
     /**
      * Ejercicio 9. Realizar un programa que lea los tiempos en los que de 10 corredores han acabado una carrera. El programa debe

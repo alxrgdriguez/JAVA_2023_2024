@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Ejercicio1 {
+public class T3_Ejercicio1 {
 
 
     public static int numaleatorio(int min, int max){

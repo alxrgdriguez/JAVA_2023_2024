@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ejercicio3 {
+public class T3_Ejercicio3 {
 
     public static int numaleatorio(int min, int max) {
 

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Ejercicio8{
+class T3_Ejercicio8{
 
      /**
          *Ejercicio8. Genera aleatoriamente una tabla de 10 elementos numéricos enteros, guardalos en una array. Luego pide por
