@@ -1,6 +1,4 @@
 package Tema3Prog.Matrices.ejemplos;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -139,7 +137,7 @@ public class EjercicioTipoExamen4 {
 
             switch (opcion) {
                 case 0:
-                    System.out.println("Ocurrio un error");
+                    System.out.println("La opción no puede ser 0");
                     break;
 
                 case 1:
