@@ -29,8 +29,14 @@ public class Ejercicio11 {
         int[][] matriz = new int[5][5];
 
 
-        
+        int cero = 0;
+        for (int i = 0; i < matriz.length; i++){
 
+            cero = matriz[i][i];
+
+        }
+
+        pintarMatriz(matriz);
     }
 
 }
