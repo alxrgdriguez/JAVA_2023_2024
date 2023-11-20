@@ -92,7 +92,7 @@ public class EjercicioTipoExamen4 {
 
     public static void main(String[] args) {
         
- /**
+        /**
          * 4. Crear una matriz de 5x5 elementos int aleatorios entre 1 y 20
         Opciones de menú:
             - 1. Suma una fila que se pedirá al usuario
