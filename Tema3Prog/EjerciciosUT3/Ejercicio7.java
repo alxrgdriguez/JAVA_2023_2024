@@ -62,7 +62,7 @@ public class Ejercicio7 {
     System.out.println(Arrays.toString(n));
 
     int moverN = 0;
-    System.out.println("Dime el valor de (N) las posiciones que deseas desplazar el array " );
+    System.out.println("Dime el numero de (N) las posiciones que deseas desplazar el array " );
     moverN = Integer.parseInt(sc.nextLine());
 
     //Creamos un array vacio para no perder los valores del array principal
