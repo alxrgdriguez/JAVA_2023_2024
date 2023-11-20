@@ -1,4 +1,6 @@
-public class Ejercicio12 {
+import java.util.Arrays;
+
+public class T3_Ejercicio12 {
 
      /**
      * Función para pintar por consola los valores de una matriz de enteros
@@ -24,6 +26,25 @@ public class Ejercicio12 {
 
     }
 
+    public static void llenaCeros(int[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) { //fila 0
+
+            for (int j = 0; j < matriz[i].length; j++) {
+
+                if (i == 0 || i == matriz.length-1 ||  j == 0 || j == matriz[i].length -1){
+
+                    matriz[i][j] = 0;
+                    System.out.print(matriz[i][j]+ " ");
+
+                }
+
+            }
+
+            System.out.println();
+        }
+
+    }
+
     public static void main(String[] args) {
         
         /**
@@ -31,6 +52,18 @@ public class Ejercicio12 {
           de los bordes que deben ser 1. Mostrarla.
          */
 
+         int[][] matrizMarco = new int[8][6];
+
+         for(int i = 0; i < matrizMarco.length;i++){
+
+            for (int j = 0; j < matrizMarco[i].length; j++){
+
+                matrizMarco[i][j] = numaleatorio(1, 99);
+            }
+         }
+
+        System.out.println("--- MATRIZ ---");
+        pintarMatriz(matrizMarco);
 
 
     }

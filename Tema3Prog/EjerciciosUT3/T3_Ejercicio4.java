@@ -85,6 +85,7 @@ public class T3_Ejercicio4 {
     System.out.println("Hay "+ contadorSuperior + " personas con una altura superior a la media");
     System.out.println("Hay " + contadorInferior + " personas con una altura inferior a la media");
 
+    sc.close();
 
     }
     

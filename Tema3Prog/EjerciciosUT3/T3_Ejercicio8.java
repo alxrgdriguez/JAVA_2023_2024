@@ -56,6 +56,8 @@ class T3_Ejercicio8{
             }
         } while (posicion < 0 || posicion > 9);
 
+        sc.close();
+
     }
 
 }
