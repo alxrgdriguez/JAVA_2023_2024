@@ -1,4 +1,5 @@
-public class Ejercicio11 {
+
+public class T3_Ejercicio11 {
 
      /**
      * Función para pintar por consola los valores de una matriz de enteros
