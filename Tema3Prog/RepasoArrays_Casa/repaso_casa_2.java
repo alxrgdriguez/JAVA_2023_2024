@@ -1,5 +1,7 @@
 package Tema3Prog.RepasoArrays_Casa;
 
+import java.util.Arrays;
+
 public class repaso_casa_2 {
 
     public static void main(String[] args) {
@@ -13,9 +15,9 @@ public class repaso_casa_2 {
 
     System.out.print("Los numeros pares son: ");
 
-    for (int num : numeros) {
-        if (num % 2 == 0) {
-            System.out.print(num+" " );
+    for (int i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 == 0) {
+            System.out.print(numeros[i] + " ");
         }
     }
 
