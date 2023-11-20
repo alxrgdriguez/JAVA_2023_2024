@@ -121,14 +121,15 @@ public class EjercicioTipoExamen4 {
         pintarMatriz(numeros);
 
         do {
-            System.out.println("\n1. Suma una fila que se pedirá al usuario");
+            System.out.println("\n------ MENU ------");
+            System.out.println("1. Suma una fila que se pedirá al usuario");
             System.out.println("2. Suma una columna que se pedirá al usuario");
             System.out.println("3. Suma la diagonal principal");
             System.out.println("4. Devuelve la media de todos los valores de la matriz");
             System.out.println("5. Salir");
 
             try {
-                System.out.println("Introduce una opción: ");
+                System.out.print("Introduce una opción: ");
                 opcion = Integer.parseInt(sc.nextLine());
             } catch (Exception e) {
                 
