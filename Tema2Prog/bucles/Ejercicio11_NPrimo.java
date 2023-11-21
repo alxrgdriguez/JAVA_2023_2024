@@ -1,6 +1,7 @@
+package bucles;
 import java.util.Scanner;
 
-public class Ejercicio11 {
+public class Ejercicio11_NPrimo {
 
     public static void main(String[] args) {
         

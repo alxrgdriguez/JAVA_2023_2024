@@ -1,3 +1,4 @@
+package bucles;
 public class FactorialEjemplo {
 
     public static void main(String[] args) {
