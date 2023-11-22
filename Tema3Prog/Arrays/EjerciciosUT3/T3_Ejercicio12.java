@@ -40,11 +40,10 @@ public class T3_Ejercicio12 {
 
             for (int j = 0; j < matrizMarco[i].length; j++){
 
-                matrizMarco[i][j] = numaleatorio(1, 99);
             }
          }
 
-        System.out.println("--- MATRIZ ---");
+        System.out.println("----- MATRIZ -----");
         pintarMatriz(matrizMarco);
 
 
