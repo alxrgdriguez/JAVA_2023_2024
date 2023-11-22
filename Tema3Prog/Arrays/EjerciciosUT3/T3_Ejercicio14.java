@@ -64,8 +64,31 @@ public class T3_Ejercicio14 {
 
     }
 
+    /**
+     * Función que devuelve la media de toda la matriz
+     * @param matriz
+     * @return Devuelve la media 
+     */
+    public static double mediaMatriz(int[][] matriz){
 
-    public static int mediaMatriz(int matriz[][] )
+        double media = 0;
+        int contador = 0;
+
+        for(int i = 0; i < matriz.length; i++){
+
+            for(int j = 0; j < matriz[i].length; j++){
+
+                media += matriz[i][j];
+                contador++;
+
+            }
+        }
+
+        media /= contador;
+
+        return media;
+
+    }
 
     public static int numaleatorio(int min, int max){
 
@@ -90,13 +113,15 @@ public class T3_Ejercicio14 {
             }
          }
 
+        //Imprimimos la matriz generada aleatoriamente
         System.out.println("-- MATRIZ --");
         pintarMatriz(numeros);
 
+        //Imprimimos los resultados
         System.out.println();
         System.out.println("El numero maximo de la matriz es: " + maximoMatriz(numeros));
         System.out.println("El numero minimo de la matriz es: " + minimoMatriz(numeros));
-        System.out.println("La media entre el maximo  " + maximoMatriz(numeros) + " y el minimo " + minimoMatriz(numeros) + " es: " );
+        System.out.println("La media de todos los elementos de la matriz es: " + mediaMatriz(numeros));
 
     }
     
