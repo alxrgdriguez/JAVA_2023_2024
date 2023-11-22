@@ -6,7 +6,7 @@ public class T3_Ejercicio15 {
 
     }
 
-       /**
+  /**
      * Función para pintar por consola los valores de una matriz de enteros
      * @param matriz
      *      */
@@ -15,13 +15,32 @@ public class T3_Ejercicio15 {
             
             for(int j=0; j<matriz[0].length; j++) {
                 if(matriz[i][j] <= 9){
-                    System.out.print(" " + matriz[i][j] + " ");
+                    System.out.print("0" + matriz[i][j] + " ");
                 }else{
                     System.out.print(matriz[i][j] + " ");
                 }
             }
             System.out.println();
         }
+    }
+
+
+    public static int[][] sumarMatrices(int[][] matriz1, int[][] matriz2){
+
+        int suma[][] = new int[3][3];
+        
+        for(int i = 0; i < matriz1.length; i++){
+
+            for (int j = 0; j < matriz1[i].length; j++){
+
+                suma[i][j] = matriz1[i][j] + matriz2[i][j]; 
+                
+            }
+        }
+
+        return suma;
+
+
     }
 
 
@@ -42,7 +61,7 @@ public class T3_Ejercicio15 {
 
             for(int j = 0; j < matriz1.length; j++){
 
-                matriz1[i][j] = numaleatorio(10, 99);
+                matriz1[i][j] = numaleatorio(1, 20);
 
             }
         }
@@ -56,7 +75,7 @@ public class T3_Ejercicio15 {
 
             for(int j = 0; j < matriz2.length; j++){
 
-                matriz2[i][j] = numaleatorio(10, 99);
+                matriz2[i][j] = numaleatorio(1, 20);
 
             }
         }
@@ -64,6 +83,10 @@ public class T3_Ejercicio15 {
         System.out.println();
         System.out.println("--- MATRIZ 2 --");
         pintarMatriz(matriz2);
+
+        System.out.println();
+        System.out.println("La suma de la matriz es\n ");
+        pintarMatriz(sumarMatrices(matriz1, matriz2));
 
 
 
