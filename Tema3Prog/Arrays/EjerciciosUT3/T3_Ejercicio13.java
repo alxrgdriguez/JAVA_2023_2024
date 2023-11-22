@@ -66,7 +66,7 @@ public class T3_Ejercicio13 {
 
         for(int i = 0; i < suma.length; i++){
 
-            System.out.println("Posicion " + suma[i]);
+            System.out.println("Posicion " + (i+1) + " = " + suma[i]);
         }
 
      
