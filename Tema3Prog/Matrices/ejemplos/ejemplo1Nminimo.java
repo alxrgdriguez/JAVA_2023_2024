@@ -39,9 +39,7 @@ public class ejemplo1Nminimo {
 
             }
 
-
         }
-
 
         return minimo;
     }

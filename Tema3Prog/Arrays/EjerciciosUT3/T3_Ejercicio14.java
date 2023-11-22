@@ -19,6 +19,53 @@ public class T3_Ejercicio14 {
         }
     }
 
+    /**
+     * Función que devuelve el menor numero de una matriz
+     * @param matriz Elementos de la matriz 
+     * @return Devuelve el mínimo de la matriz
+     */
+    public static int minimoMatriz(int matriz[][]){
+
+        int minimo = Integer.MAX_VALUE;
+
+        for(int i = 0; i < matriz.length; i++){
+
+            for(int j = 0; j < matriz[0].length; j++){
+
+                //Decimos cual es el minimo
+
+                if(matriz[i][j] < minimo){
+
+                    minimo = matriz[i][j];
+                }
+            }
+        }
+        return minimo;
+    }
+
+    public static int maximoMatriz(int matriz[][]){
+
+        int maximo = Integer.MIN_VALUE;
+
+        for(int i = 0; i < matriz.length; i++){
+
+            for(int j = 0; j < matriz[0].length; j++){
+
+                //Decimos cual es el maximo
+
+                if(matriz[i][j] > maximo){
+
+                    maximo = matriz[i][j];
+                }
+            }
+        }
+
+        return maximo;
+
+    }
+
+
+    public static int mediaMatriz(int matriz[][] )
 
     public static int numaleatorio(int min, int max){
 
@@ -45,6 +92,11 @@ public class T3_Ejercicio14 {
 
         System.out.println("-- MATRIZ --");
         pintarMatriz(numeros);
+
+        System.out.println();
+        System.out.println("El numero maximo de la matriz es: " + maximoMatriz(numeros));
+        System.out.println("El numero minimo de la matriz es: " + minimoMatriz(numeros));
+        System.out.println("La media entre el maximo  " + maximoMatriz(numeros) + " y el minimo " + minimoMatriz(numeros) + " es: " );
 
     }
     
