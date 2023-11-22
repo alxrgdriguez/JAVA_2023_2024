@@ -18,6 +18,8 @@ public class T3_Ejercicio16 {
         }
     }
 
+   
+
     public static int numaleatorio(int min, int max){
 
         return (int) (Math.random() * (max - min + 1) + min);
@@ -34,7 +36,22 @@ public class T3_Ejercicio16 {
         int[][] matriz = new int[3][6];
 
 
+    while () {
 
+        for(int i = 0; i < matriz.length; i++){
+
+            for(int j = 0; j < matriz[i].length; j++){
+
+                matriz[i][j] = numaleatorio(10, 50);
+
+            }
+        }
+    }
+        
+
+    //Pintamos la matriz rellenada con numeros aleatorios
+    System.out.println("\n-- MATRIZ --");
+    pintarMatriz(matriz);
 
     }
     
