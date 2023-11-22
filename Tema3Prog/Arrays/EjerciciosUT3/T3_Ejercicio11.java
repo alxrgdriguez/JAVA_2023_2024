@@ -19,13 +19,6 @@ public class T3_Ejercicio11 {
         }
     }
 
-    public static int numaleatorio(int min, int max){
-
-        return (int) (Math.random() * (max - min + 1) + min);
-
-    }
-
-
     public static void main(String[] args) {
         
         /**
@@ -34,15 +27,13 @@ public class T3_Ejercicio11 {
          */
 
         int[][] matriz = new int[5][5];
-        int uno = 1;
-
         
         for (int i = 0; i < matriz.length; i++){
 
             for (int j = 0; j < matriz[i].length; j++){
 
-                matriz[i][j] = numaleatorio(0, 0);
-                matriz[i][i] = uno;
+                matriz[i][j] = 0;
+                matriz[i][i] = 1;
             }
 
         }

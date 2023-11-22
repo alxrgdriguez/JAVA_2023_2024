@@ -36,12 +36,19 @@ public class T3_Ejercicio12 {
 
          int[][] matrizMarco = new int[8][6];
 
-         for(int i = 0; i < matrizMarco.length;i++){
-
-            for (int j = 0; j < matrizMarco[i].length; j++){
-
+         // Recorremos la matriz
+        for (int i = 0; i < matrizMarco.length; i++) {
+            for (int j = 0; j < matrizMarco[i].length; j++) {
+                
+                // Si estamos en el borde de la matriz, ponemos un 1
+                if (i == 0 || i == matrizMarco.length - 1 || j == 0 || j == matrizMarco[i].length - 1) {
+                    matrizMarco[i][j] = 1;
+                } else {
+                    // En el resto de la matriz, ponemos un 0
+                    matrizMarco[i][j] = 0;
+                }
             }
-         }
+        }
 
         System.out.println("----- MATRIZ -----");
         pintarMatriz(matrizMarco);
