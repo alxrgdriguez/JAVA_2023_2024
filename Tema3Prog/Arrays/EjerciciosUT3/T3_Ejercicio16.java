@@ -1,6 +1,6 @@
 public class T3_Ejercicio16 {
 
-     /**
+        /**
      * Función para pintar por consola los valores de una matriz de enteros
      * @param matriz
      *      */
@@ -35,9 +35,6 @@ public class T3_Ejercicio16 {
 
         int[][] matriz = new int[3][6];
 
-
-    while () {
-
         for(int i = 0; i < matriz.length; i++){
 
             for(int j = 0; j < matriz[i].length; j++){
@@ -46,7 +43,21 @@ public class T3_Ejercicio16 {
 
             }
         }
-    }
+    
+          // Elimina los números repetidos
+          for (int i = 0; i < matriz.length; i++) {
+
+            for (int j = 0; j < matriz[i].length; j++) {
+
+                for (int k = 0; k < matriz[i].length; k++) {
+
+                    if (i != k && matriz[i][j] == matriz[k][j]) {
+
+                        matriz[i][j] = numaleatorio(1, 100);
+                    }
+                }
+            }
+        }
         
 
     //Pintamos la matriz rellenada con numeros aleatorios
