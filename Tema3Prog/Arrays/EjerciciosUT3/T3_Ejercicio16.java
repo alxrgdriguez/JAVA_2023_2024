@@ -18,6 +18,27 @@ public class T3_Ejercicio16 {
         }
     }
 
+
+    public static boolean siRepite(int[][] matriz, int numero){
+
+        for(int i = 0; i < matriz.length; i++){
+
+            for(int j = 0; j < matriz[i].length; j++){
+
+                if(numero == matriz[i][j]){
+
+                    return true;
+
+                }
+
+            }
+        }
+
+        return false;
+
+    }
+
+
     public static int numAleatorio(int min, int max) {
         return (int) (Math.random() * (max - min + 1) + min);
     }
@@ -29,10 +50,18 @@ public class T3_Ejercicio16 {
          */
 
         int[][] matriz = new int[3][6];
+        int numero = 0;
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = numAleatorio(1, 10 );
+                do {
+
+                    numero = numAleatorio(1, 50);
+                    
+                } while (siRepite(matriz, numero));
+
+                matriz[i][j] = numero;
+
             }
         }
 
