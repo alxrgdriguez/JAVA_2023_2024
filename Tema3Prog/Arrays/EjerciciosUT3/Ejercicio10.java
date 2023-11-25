@@ -10,7 +10,7 @@ public class Ejercicio10 {
             for(int j=0; j<matriz[0].length; j++) {
                 System.out.print(matriz[i][j] + " ");
             }
-            System.out.println();
+            System.out.println("");
         }
     }
 
@@ -63,6 +63,8 @@ public class Ejercicio10 {
             }
         }
 
+        // Pintamos la matriz rellenada con números aleatorios
+        System.out.println("\n----- Nº LOTERIA ----");
         pintarMatriz(numLoteria);
 
     }
