@@ -1,4 +1,10 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+
 public class T3_Ejercicio9 {
+
+  
 
     /**
      * Ejercicio 9. Realizar un programa que lea los tiempos en los que de 10 corredores han acabado una carrera. El programa debe
@@ -7,8 +13,27 @@ public class T3_Ejercicio9 {
      */
     public static void main(String[] args) {
         
+      Scanner sc = new Scanner(System.in);
 
+        // Declarar el array para almacenar los tiempos de los corredores
+        double[] tiempos = new double[10];
+
+        // Leer los tiempos de los corredores
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Ingrese el tiempo del corredor " + (i + 1) + ": ");
+            tiempos[i] = Double.parseDouble(sc.nextLine());
+        }
+
+        // Ordenar el array de tiempos en orden ascendente
+        Arrays.sort(tiempos);
       
+         // Mostrar el primer, segundo y último puesto
+         System.out.println("\nResultados de la carrera:");
+         System.out.println("Primer puesto: Corredor 1 - Tiempo: " + tiempos[0] + " segundos");
+         System.out.println("Segundo puesto: Corredor 2 - Tiempo: " + tiempos[1] + " segundos");
+         System.out.println("Último puesto: Corredor 10 - Tiempo: " + tiempos[9] + " segundos");
+
+
     }
     
 }
