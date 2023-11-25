@@ -38,27 +38,48 @@ public class T3_Ejercicio18 {
           suma total debe aparecer en la esquina inferior derecha.
          */
 
-         int[][] matriz = new int[4][5];
-         int[][] matriz2 = new int[5][6];
+        int[][] matriz = new int[5][6];
+        int sumarFilas = 0;
+        int sumarColumnas = 0;
+        int numeroGenerado = 0;
 
-        for (int i = 0; i < matriz.length; i++) {
+
+        for (int i = 0; i < matriz.length-1; i++) {
         
             for (int j = 0; j < matriz[i].length; j++) {
 
-                matriz[i][j] = numaleatorio(0, 9);
+                if (j != 5){
+
+                    numeroGenerado = numaleatorio(0, 9);
+                    sumarFilas += numeroGenerado;
+                    matriz[i][j] = numeroGenerado;
+
+                }else{
+
+                    matriz[i][j] = sumarFilas;
+                    sumarFilas = 0;
+                }
             
             }  
         }
 
-        for (int i = 0; i < matriz2.length; i++) {
-            
-            for (int j = 0; j < matriz2[i].length; j++) {
+        for(int i = 0; i < matriz[0].length; i++){
+
+            for (int j = 0; j < matriz.length; j++) {
                 
+                if (j != 4) {
                 
+                    sumarColumnas += matriz[j][i];
+
+                }else{
+
+                    matriz[j][i] = sumarColumnas;
+                    sumarColumnas = 0;
+                }
+
             }
+
         }
-
-
         pintarMatriz(matriz);
 
 
