@@ -1,5 +1,3 @@
-package Tema3Prog.Arrays;
-
 import java.util.Scanner;
 
 public class EjercicioEjemploArray {

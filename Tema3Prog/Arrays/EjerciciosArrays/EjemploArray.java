@@ -1,5 +1,3 @@
-package Tema3Prog.Arrays;
-
 public class EjemploArray {
 
     public static void main(String[] args) {
