@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Ejercicio10 {
 
      
@@ -20,16 +22,13 @@ public class Ejercicio10 {
     }
 
 
-    public static boolean siRepite(int[][] numLoteria, int numero){
+    public static boolean siRepite(int[] numLoteria, int numero){
 
         for (int i = 0; i < numLoteria.length; i++){
 
-            for(int j = 0; j < numLoteria[i].length; j++){
-
-                if(numLoteria[i][j] == numero){
+                if(numLoteria[i] == numero){
 
                     return true;
-                }
             }
         }
 
@@ -44,28 +43,26 @@ public class Ejercicio10 {
         La particularidad es que los números no deben estar repetidos
          */
 
-        int[][] numLoteria = new int[6][6];
+        int[] numLoteria = new int[6];
         int numero = 0;
 
         for (int i = 0; i < numLoteria.length; i++) {
-            
-            for (int j = 0; j < numLoteria[i].length; j++) {
 
-                do {
+            do {
 
-                    numero = numAleatorio(1, 49);
-                    
-                } while (siRepite(numLoteria, numero));
+                numero = numAleatorio(1, 49);
+                
+            } while (siRepite(numLoteria, numero));
 
-                numLoteria[i][j] = numero;
+            numLoteria[i] = numero;
 
                 
-            }
+           
         }
 
         // Pintamos la matriz rellenada con números aleatorios
         System.out.println("\n----- Nº LOTERIA ----");
-        pintarMatriz(numLoteria);
+        System.out.println(Arrays.toString(numLoteria));
 
     }
     
