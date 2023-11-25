@@ -1,4 +1,4 @@
-package Tema3Prog.EjerciciosArrays;
+package Tema3Prog.Arrays.EjerciciosArrays;
 
 public class Ejercicio5 {
 

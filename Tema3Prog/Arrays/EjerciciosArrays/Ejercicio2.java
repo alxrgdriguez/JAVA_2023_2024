@@ -1,4 +1,4 @@
-package Tema3Prog.EjerciciosArrays;
+package Tema3Prog.Arrays.EjerciciosArrays;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

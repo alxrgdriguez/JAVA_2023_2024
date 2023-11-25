@@ -1,3 +1,4 @@
+package Tema3Prog.Arrays.EjerciciosArrays;
 public class EjemploArray {
 
     public static void main(String[] args) {

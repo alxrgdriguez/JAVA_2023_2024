@@ -1,3 +1,4 @@
+package Tema3Prog.Arrays.EjerciciosArrays;
 import java.util.Scanner;
 
 public class EjercicioEjemploArray {
