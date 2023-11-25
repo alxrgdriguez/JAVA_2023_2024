@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class T3_Ejercicio17 {
@@ -116,7 +115,7 @@ public class T3_Ejercicio17 {
         ordenarFilas(matriz);
         System.out.println("\nEl array ordenado por filas: ");
         pintarMatriz(matriz);
-        
+
 
         System.out.println("\n----------------------------");
 
