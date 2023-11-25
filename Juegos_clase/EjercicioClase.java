@@ -33,7 +33,7 @@ public class EjercicioClase {
 
 
         try{
-        numTurnos = 
+        numTurnos = 0;
         
         if (numTurnos <= 0){
 
