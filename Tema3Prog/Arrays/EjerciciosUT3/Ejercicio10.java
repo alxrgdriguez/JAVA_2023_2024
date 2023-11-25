@@ -61,7 +61,7 @@ public class Ejercicio10 {
         }
 
         // Pintamos la matriz rellenada con números aleatorios
-        System.out.println("\n----- Nº LOTERIA ----");
+        System.out.println("\n   --- Nº LOTERIA ---");
         System.out.println(Arrays.toString(numLoteria));
 
     }
