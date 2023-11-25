@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class T3_Ejercicio12 {
 
      /**

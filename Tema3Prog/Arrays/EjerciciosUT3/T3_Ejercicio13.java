@@ -31,7 +31,6 @@ public class T3_Ejercicio13 {
         Scanner sc = new Scanner(System.in);
 
         int[][] numeros = new int[3][4];
-        int[][] fila = new int[0][0];
 
 
         for(int i = 0; i < numeros.length; i++){
@@ -69,7 +68,7 @@ public class T3_Ejercicio13 {
             System.out.println("Posicion " + (i+1) + " = " + suma[i]);
         }
 
-     
+        sc.close();
     }
     
 }
