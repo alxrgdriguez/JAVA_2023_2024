@@ -1,4 +1,37 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class T3_Ejercicio17 {
+
+    /**
+     * Función para generar numeros aleatorios entre un mínimo y un maximo
+     * @param min Desde el menor numero (rango)
+     * @param max Hasta el maximo (rango)
+     * @return Devuelve los numeros aleatorios generados automáticamente
+     */
+    public static int numaleatorio(int min, int max){
+
+        return (int) (Math.random() * (max - min + 1) + min);
+
+    }
+
+      /**
+     * Función para pintar por consola los valores de una matriz de enteros
+     * @param matriz
+     *      */
+    public static void pintarMatriz(int[][] matriz) {
+        for(int i=0; i<matriz.length; i++) {
+            
+            for(int j=0; j<matriz[0].length; j++) {
+                if(matriz[i][j] <= 9){
+                    System.out.print(" " + matriz[i][j] + " ");
+                }else{
+                    System.out.print(matriz[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
         
@@ -10,6 +43,25 @@ public class T3_Ejercicio17 {
         b. ordenaColumnas(matriz): que ordene la matriz por columnas, cada columna quedará ordenada de
         menor a mayor, independientemente de las demás.
         */
+
+
+        int[][] matriz = new int[50][50];
+
+        for (int i = 0; i < matriz.length; i++) {
+            
+            for (int j = 0; j < matriz[0].length; j++) {
+                
+                matriz[i][j] = numaleatorio(1, 500);
+
+            }
+        }
+
+        //Ordenamos la matriz
+        Arrays.sort(matriz);
+        
+        //Pintamos la matriz
+        System.out.println();
+        pintarMatriz(matriz);
 
     }
     
