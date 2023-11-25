@@ -44,13 +44,32 @@ public class T3_Ejercicio17 {
     }
 
     /**
-     * Función para ordenar la matriz por filas de menor a mayor
+     * Función para ordenar la matriz por columnas de menor a mayor
      * @param args
      */
 
     private static void ordenarColumas(int[][] matriz){
 
+        int[] numero = new int[matriz[0].length];
 
+        for(int j = 0; j < matriz[0].length; j++){
+
+            for (int i = 0; i < matriz.length; i++) {
+                
+                numero[i] = matriz[i][j];
+
+            }
+
+            Arrays.sort(numero);
+
+            for (int i = 0; i < numero.length; i++) {
+                
+                matriz[i][j] = numero[i];
+
+            }
+        }
+
+        
 
     }
 
@@ -68,31 +87,44 @@ public class T3_Ejercicio17 {
 
 
         int[][] matriz = new int[5][5];
+        int[][] matrizCopia = new int[5][5];
+        int numeroGenerado = 0;
         
         //Rellenamos nuestro Array bidimensional con numeros aleatorios entre (1-500)
         for (int i = 0; i < matriz.length; i++) {
             
             for (int j = 0; j < matriz[i].length; j++) {
                 
-                matriz[i][j] = numaleatorio(1, 500);
+                numeroGenerado = numaleatorio(1, 500);
+                matriz[i][j] = numeroGenerado;
+                matrizCopia[i][j] = numeroGenerado;
 
             }
         }
 
-              // Mostrar la matriz original
-              System.out.println("Matriz original:");
-              pintarMatriz(matriz);
+
+        // Mostrar la matriz original
+        System.out.println("Matriz original:");
+        pintarMatriz(matriz);
 
 
-            System.out.println("\n----------------------------");
+        System.out.println("\n----------------------------");
 
 
-              // Ordenar por filas
+        // Ordenar por filas
 
-              ordenarFilas(matriz);
-              System.out.println("\nEl array ordenado por filas: ");
-              pintarMatriz(matriz);
-              
+        ordenarFilas(matriz);
+        System.out.println("\nEl array ordenado por filas: ");
+        pintarMatriz(matriz);
+        
+
+        System.out.println("\n----------------------------");
+
+
+        // Ordenar por columnas
+        ordenarColumas(matrizCopia);
+        System.out.println("\nEl array ordenado por columnas: ");
+        pintarMatriz(matrizCopia);
       
     }
     
