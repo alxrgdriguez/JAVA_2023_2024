@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Ejercicio10 {
+public class T3_Ejercicio10 {
 
      
     /**
