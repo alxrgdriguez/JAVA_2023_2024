@@ -1,3 +1,4 @@
+package ejemplos_T1;
 class ejemplo2 {
 
     public static void main (String[] args) { 

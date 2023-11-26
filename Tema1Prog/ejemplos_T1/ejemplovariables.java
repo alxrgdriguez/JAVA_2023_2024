@@ -1,3 +1,4 @@
+package ejemplos_T1;
 class ejemplovariables {
 
     public static void main (String[] args) { 

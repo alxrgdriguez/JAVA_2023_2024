@@ -1,3 +1,4 @@
+package ejemplos_T1;
 import java.util.Scanner; //Importar la clase para poder usarla
 
 public class EjemploScanner {

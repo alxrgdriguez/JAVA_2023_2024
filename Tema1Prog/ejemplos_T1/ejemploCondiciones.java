@@ -1,3 +1,4 @@
+package ejemplos_T1;
 public class ejemploCondiciones {
 
     public static void main(String[] args) {
