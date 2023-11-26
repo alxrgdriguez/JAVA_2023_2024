@@ -10,12 +10,12 @@ public class T0_Ejercicio5 {
 
     // b) 
 
-        int PI = 3.14; 
+        double PI = 3.14; 
         System.out.println(PI); //No funciona porque al agregarle un valor entero no puede ser con decimales.
 
     // c)
 
-        double PI=3,14;
+        double PI=3.14;
         System.out.println(PI); //No funcionaría porque aunque sea un 'double' la expresión decimal no se pone con una ,
 
     // d)
