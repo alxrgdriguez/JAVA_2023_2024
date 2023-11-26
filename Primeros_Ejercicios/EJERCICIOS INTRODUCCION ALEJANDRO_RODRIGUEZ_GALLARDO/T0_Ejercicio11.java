@@ -1,4 +1,4 @@
-public class Ejercicio11 {
+public class T0_Ejercicio11 {
 
     //11. Realiza un programa que calcule el área y el perímetro de un círculo de radio 3,6 metros.
 

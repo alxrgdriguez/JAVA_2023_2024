@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Ejercicio17 {
+public class T0_Ejercicio17 {
 
     public static void main(String[] args) {
         

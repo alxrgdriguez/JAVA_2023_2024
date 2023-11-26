@@ -1,4 +1,4 @@
-public class Ejercicio9 {
+public class T0_Ejercicio9 {
 
         
         // 9. El siguiente programa tiene 3 fallos, averigua cuáles son y modifica el programa para que funcione

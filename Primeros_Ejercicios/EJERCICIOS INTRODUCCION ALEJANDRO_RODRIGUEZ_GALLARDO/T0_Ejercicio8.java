@@ -1,4 +1,4 @@
-class Ejercicio8{
+class T0_Ejercicio8{
 
     static int n1=50;
     public static void main(String[] args) {
