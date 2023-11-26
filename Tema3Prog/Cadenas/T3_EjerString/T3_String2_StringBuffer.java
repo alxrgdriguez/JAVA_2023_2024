@@ -2,7 +2,7 @@ package Tema3Prog.Cadenas.T3_EjerString;
 
 import java.util.Scanner;
 
-public class T3_String2 {
+public class T3_String2_StringBuffer {
 
     public static void main(String[] args) {
         
@@ -14,24 +14,21 @@ public class T3_String2 {
            con String y otra con StringBuffer.
          */
 
-         //Declaramos nuestro Scanner
         Scanner sc = new Scanner(System.in);
 
-        //Declaramos nuestra variable tipo cadena
-        String cadena = "";
+        StringBuffer cadena = new StringBuffer();
+        StringBuffer cadenaTemp = new StringBuffer();
+
+        System.out.println("Introduce la cadena de carácteres: ");
+        cadena.append(sc.nextLine());
         
-        //Pedimos al usuario que nos introduzca la cadena pedida por teclado
-        System.out.println("Introduce una cadena de caracteres: ");
-        cadena = sc.nextLine();
-    
-      //Recorremos la cadena de la ultima posición hacia la primera para ir añadiendo a la variable temp los carácteres uno por uno
-        for(int i = cadena.length()-2; i >= 0; i--){
-          cadena += cadena.charAt(i);
-        }
+        cadenaTemp.append(cadena);//No usar = para darle el mismo valor, porque sino luego al hacer una manipulacion, se hace en los 2
 
-        System.out.println(cadena);
+        cadenaTemp.reverse();
 
-
+        cadena.deleteCharAt(cadena.length()-1);
+        
+        System.out.println(cadena.append(cadenaTemp));
     }
     
 }
