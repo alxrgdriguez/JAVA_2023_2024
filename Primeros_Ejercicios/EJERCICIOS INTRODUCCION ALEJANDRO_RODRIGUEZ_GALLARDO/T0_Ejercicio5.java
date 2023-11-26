@@ -4,7 +4,7 @@ public class T0_Ejercicio5 {
         
         // 5. Cumplimenta la siguiente tabla:
 
-    // a)
+    /*// a)
         int a='a';
         System.out.println(a); //Si funciona proporcionaría el valor de 'a' en ASCII que es 97
 
@@ -34,6 +34,6 @@ public class T0_Ejercicio5 {
         System.out.println(adivina); //Si funciona porque aparece true, asi que devolverá true
         
                             
-    }
-    
+    }*/
+    }  
 }
