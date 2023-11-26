@@ -1,3 +1,4 @@
+package ejemplos_T1;
 import java.util.Scanner;
 
 public class CalcularHipotenusa {

@@ -1,4 +1,5 @@
-public class Ejercicio3Tema1 {
+package T1_Ejercicios;
+public class T1_Ejercicio_3 {
 
     //Tenemos dos variables int a  y b, tenemos que intercambiar su valor
 

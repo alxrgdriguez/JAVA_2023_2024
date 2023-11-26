@@ -1,6 +1,7 @@
+package T1_Ejercicios;
 import java.util.Scanner;
 
-public class Ejercicio6Cero {
+public class T1_Ejercicio6 {
 
     public static void main(String[] args) {
         

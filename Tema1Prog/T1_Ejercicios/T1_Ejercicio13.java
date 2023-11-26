@@ -1,4 +1,5 @@
-public class Ejercicio13Cero {
+package T1_Ejercicios;
+public class T1_Ejercicio13 {
 
     public static void main(String[] args) {
         
