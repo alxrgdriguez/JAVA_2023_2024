@@ -6,7 +6,7 @@ public class PracticaString {
 
     public static String vocalsustituida(String  vocal, String cadena){
 
-        StringBuffer sustituida = new StringBuffer();
+        StringBuffer sustucion= new StringBuffer();
 
         for (int i = 0; i < cadena.length(); i++) {
 
@@ -19,13 +19,13 @@ public class PracticaString {
                 caracter == 'í' || caracter == 'ó' || caracter == 'ú' || caracter == 'Á' ||
                 caracter == 'É' || caracter == 'Í' || caracter == 'Ó' || caracter == 'Ú') {
 
-                System.out.println(sustituida);
+                sustucion.append(vocal);
             }
 
             
         }
 
-        return vocal;
+        return sustucion.toString();
     }
 
 
@@ -61,7 +61,7 @@ public class PracticaString {
         
 
         System.out.println("Cadena original : " + cadena);
-        System.out.println("Cadena sustituida por la vocal " + vocalIntroducida + " es " + vocalsustituida(vocalIntroducida, cadena));
+        System.out.println("Cadena sustituida por la vocal " + vocalIntroducida + " es: " + vocalsustituida(vocalIntroducida, cadena));
 
         sc.close();
     }
