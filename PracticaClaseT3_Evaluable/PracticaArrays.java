@@ -112,7 +112,7 @@ public class PracticaArrays {
         }
 
 
-        System.out.println(estadisticas(n));
+        System.out.println(estadisticas(n = 100));
         
         System.out.println("La suma total es de: " + (contador -2));
       
