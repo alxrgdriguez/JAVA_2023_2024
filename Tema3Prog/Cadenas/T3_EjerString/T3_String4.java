@@ -1,6 +1,5 @@
 package Tema3Prog.Cadenas.T3_EjerString;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class T3_String4 {

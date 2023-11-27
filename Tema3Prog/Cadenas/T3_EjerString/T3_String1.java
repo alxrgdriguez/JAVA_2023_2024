@@ -1,7 +1,4 @@
 package Tema3Prog.Cadenas.T3_EjerString;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
 
 class T3_String1{
