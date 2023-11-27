@@ -42,7 +42,7 @@ public class PracticaArrays {
 
             dado[i] = aleatorioDouble(1.0, 6.0);
             
-            System.out.println(dado);
+            
         }
 
 
@@ -73,6 +73,7 @@ public class PracticaArrays {
         int contador = 0;
         int dado1 = 0;
         int dado2 = 0;
+        int n = 0;
         
 
         //Pedimos al usuario que nos introduzca el numero de tiradas
@@ -110,6 +111,8 @@ public class PracticaArrays {
             contador = contador + sumarDados;
         }
 
+
+        System.out.println(estadisticas(n));
         
         System.out.println("La suma total es de: " + (contador -2));
       
@@ -117,7 +120,7 @@ public class PracticaArrays {
         }
         
 
-     
+    
 }
     
     
