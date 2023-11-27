@@ -31,6 +31,8 @@ public class T3_String2 {
 
         System.out.println(cadena);
 
+        sc.close();
+
 
     }
     

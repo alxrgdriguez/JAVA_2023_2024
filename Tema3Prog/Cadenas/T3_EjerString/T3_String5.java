@@ -63,6 +63,7 @@ public class T3_String5 {
 
         contarVocalesConsonantesEspacios(cadena);
       
+        sc.close();
     }
     
 }

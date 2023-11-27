@@ -29,6 +29,8 @@ public class T3_String2_StringBuffer {
         cadena.deleteCharAt(cadena.length()-1);
         
         System.out.println(cadena.append(cadenaTemp));
+
+        sc.close();
     }
     
 }

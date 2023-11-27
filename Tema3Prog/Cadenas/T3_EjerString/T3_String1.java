@@ -44,6 +44,6 @@ class T3_String1{
         //Convertir una cadena a entero
         numeros = Integer.parseInt(numerosCadena);*/
 
-
+        sc.close();
     }
 }

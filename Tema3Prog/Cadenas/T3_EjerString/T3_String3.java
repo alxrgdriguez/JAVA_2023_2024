@@ -53,6 +53,8 @@ public class T3_String3 {
         }
 
         System.out.println("Hay " + contador + " veces la palabra " + buscar + " dentro de: " + frase);*/
+
+        sc.close();
     }
     
 }

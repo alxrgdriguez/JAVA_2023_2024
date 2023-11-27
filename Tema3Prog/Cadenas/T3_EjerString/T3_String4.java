@@ -48,7 +48,7 @@ public class T3_String4 {
 
       System.out.println(cadenaTemp);
 
-
+      sc.close();
     }
     
 }
