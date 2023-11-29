@@ -1,6 +1,6 @@
 package Tema3Prog.Cadenas.T3_EjerString;
 
-public class T3_Ejercicio8 {
+public class T3_String8 {
 
 
     public static void main(String[] args) {
