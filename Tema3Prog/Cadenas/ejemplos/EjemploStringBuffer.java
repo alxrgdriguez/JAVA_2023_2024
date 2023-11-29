@@ -12,10 +12,10 @@ public class EjemploStringBuffer {
 
         System.out.println(texto);
 
-        texto.insert(20, "xxxxxxx");
+       /*texto.insert(20, "xxxxxxx");
         System.out.println(texto);
         texto.delete(texto.indexOf("xx"), texto.indexOf("xx") + 7);
-        System.out.println(texto);
+        System.out.println(texto);*/
 
     }
 }
