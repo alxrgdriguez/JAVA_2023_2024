@@ -16,6 +16,8 @@ public class T3_String8 {
          System.out.print(" " + partes[2]); // "www.iesjaroso.es"
          System.out.print(" " + partes[3] + "\n");  // "noticias"
     
+
+      
     }
 
 }
