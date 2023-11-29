@@ -4,66 +4,56 @@ import java.util.Scanner;
 
 public class PracticaString {
 
-    public static String vocalsustituida(String  vocal, String cadena){
+    public static String cambiarVocales(String cadena, String vocal) {
+        //Creamos StringBuffer del tamaño de la cadena donde guardaremos la cadena con las vocales sustituidas
+        StringBuffer sb = new StringBuffer(cadena.length());
 
-        StringBuffer sustucion= new StringBuffer();
+        for(int i=0; i < cadena.length(); i++) {
+            char caracterActual = cadena.charAt(i);
 
-        for (int i = 0; i < cadena.length(); i++) {
-
-            //Extraemos el carácter que se encuentra en la posición específica dentro de la cadena.
-            char caracter = cadena.charAt(i);
-
-            if (caracter == 'a' || caracter == 'A' || caracter == 'e' || caracter == 'E' ||
-                caracter == 'i' || caracter == 'I' || caracter == 'o' || caracter == 'O' ||
-                caracter == 'u' || caracter == 'U' || caracter == 'á' || caracter == 'é' ||
-                caracter == 'í' || caracter == 'ó' || caracter == 'ú' || caracter == 'Á' ||
-                caracter == 'É' || caracter == 'Í' || caracter == 'Ó' || caracter == 'Ú') {
-
-                sustucion.append(vocal);
+            //Si el caracter actual es una vocal, lo tengo que sustituir, sino no
+            if (caracterActual == 'a' || caracterActual == 'e' || caracterActual == 'i' || caracterActual == 'o' || caracterActual == 'u' ) {
+                //Sustituir
+                sb.append(vocal);
+            } else if (caracterActual == 'A' || caracterActual == 'E' || caracterActual == 'I' || caracterActual == 'O' || caracterActual == 'U' ) {
+                sb.append(vocal.toUpperCase());
+            } else if (caracterActual == 'á' || caracterActual == 'é' || caracterActual == 'í' || caracterActual == 'ó' || caracterActual == 'ú' ) {
+                switch (vocal) {
+                    case "a":
+                        sb.append("á");
+                        break;
+                    case "e":
+                        sb.append("é");
+                        break;
+                    case "i":
+                        sb.append("í");
+                        break;
+                    case "o":
+                        sb.append("ó");
+                        break;
+                    case "u":
+                        sb.append("ú");
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                //Añadimos el caracter tal cual
+                sb.append(caracterActual);
             }
-
             
         }
 
-        return sustucion.toString();
+        return sb.toString();
     }
-
 
     public static void main(String[] args) {
-        
-        /**
-         * Realiza una función que reciba como parámetro una cadena y una vocal (a,e,i,o,u) y devuelva
-        como resultado la cadena inicial sustituyendo todas las vocales por la vocal introducida. Debe
-        funcionar con mayúsculas y minúsculas, es decir, si la vocal a sustituir es la a, y encuentra una
-        E, el resultado de la sustitución será una A.
-        Ejemplo: “Mi amiga Ana es prima de Eva y de Irene”, le pasamos la ‘e’ y el resultado sería:
-        “Me emege Ene es preme de Eve y de Erene”.
-        No se pueden usar los métodos replace ni replaceAll de String ni StringBuffer.
-        Para sacar más nota se recomienda usar una estructura mutable (StringBuffer o StringBuilder)
-        para hacer la sustitución
-         */
-
-        //Declaramos el Scanner
-        Scanner sc = new Scanner(System.in);
-
-        //Declaramos nuestra variable cadena
-        String cadena = "";
-        String vocalIntroducida = "";
-
-        //Pedimos por teclado la cadena al usuario
-        System.out.println("Introduce una frase: ");
-        cadena = sc.nextLine();
-
-        //Pedimos la vocal que deseamos sustituir
-        System.out.println("Ahora introduce la vocal por la que quieres cambiar las otras vocales: ");
-        vocalIntroducida = sc.nextLine();
-
-        
-
-        System.out.println("Cadena original : " + cadena);
-        System.out.println("Cadena sustituida por la vocal " + vocalIntroducida + " es: " + vocalsustituida(vocalIntroducida, cadena));
-
-        sc.close();
-    }
     
+        String cadena = "La programación Está más complicada de lo que pensaba";
+
+        String resultado = cambiarVocales(cadena, "i");
+
+        System.out.println(resultado);
+        
+    }
 }
