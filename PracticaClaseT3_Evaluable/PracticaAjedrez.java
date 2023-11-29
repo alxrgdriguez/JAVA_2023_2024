@@ -30,22 +30,22 @@ public class PracticaAjedrez {
         return coordenadaResultado;
     }
 
-    public static void pintarMovimientosCaballo(int i, int j, String tablero[][]) {
-        // Definir los posibles movimientos del caballo en forma de desplazamientos en x e y
-        int[] movimientosX = {-2, -1, 1, 2, 2, 1, -1, -2};
-        int[] movimientosY = {1, 2, 2, 1, -1, -2, -2, -1};
-    
-        // Recorrer los posibles movimientos y pintarlos si están dentro del tablero y la casilla está vacía
-        for (int k = 0; k < 8; k++) {
-            int nuevoX = i + movimientosX[k];
-            int nuevoY = j + movimientosY[k];
-    
-            if (esCoordenadaValida(nuevoX, nuevoY) && tablero[nuevoX][nuevoY].equals("")) {
-                tablero[nuevoX][nuevoY] = "CM"; // Pintar el movimiento del caballo
-            }
+    public static void pintarMovimientosCaballo(int i, int j, String tablero[][]) throws Exception {
+        
+        if(j < 0 || j > 7){
+
+            throw new Exception("Cordeenadas fuera de tablero");
+
         }
-    
-        pintar(tablero); // Mostrar el tablero con los movimientos del caballo
+
+        //Comprobamos que i, j hay un caballo
+        if (tablero[i][j] != "L") {
+            throw new Exception("No hay caballo en esas coordenadas");
+        }
+
+        //Posibles movimientos del caballo
+
+        
     }
     
     public static boolean esCoordenadaValida(int x, int y) {
