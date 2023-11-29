@@ -45,7 +45,7 @@ public class PracticaAjedrez {
 
         //Posibles movimientos del caballo
 
-        
+
     }
     
     public static boolean esCoordenadaValida(int x, int y) {
@@ -133,7 +133,6 @@ public class PracticaAjedrez {
         //Pintamos el tablero
         pintar(tablero);
         // Llamar a la función para pintar los movimientos del caballo en (5, 5)
-        pintarMovimientosCaballo(5, 5, tablero);
 
         String coord[] = coordenadasAjedrez(7, 7);
         System.out.println(Arrays.toString(coord));
