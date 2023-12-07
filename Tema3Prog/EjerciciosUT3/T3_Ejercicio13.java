@@ -1,3 +1,5 @@
+package Tema3Prog.EjerciciosUT3;
+
 import java.util.Scanner;
 
 public class T3_Ejercicio13 {

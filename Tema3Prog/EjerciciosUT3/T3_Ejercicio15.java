@@ -1,3 +1,5 @@
+package Tema3Prog.EjerciciosUT3;
+
 public class T3_Ejercicio15 {
     
     public static int numaleatorio(int min, int max){
