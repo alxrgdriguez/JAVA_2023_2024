@@ -2,7 +2,7 @@ package RepasoArrays;
 
 import java.util.Arrays;
 
-public class ejemploArray1 {
+public class ejemplo1 {
 
     public static int numaleatorio(int min, int max){
 
