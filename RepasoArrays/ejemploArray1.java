@@ -22,14 +22,6 @@ public class ejemploArray1 {
 
         System.out.println(Arrays.toString(numero));
 
-        
-
-
-
-
-
-
-
     }
     
 }
