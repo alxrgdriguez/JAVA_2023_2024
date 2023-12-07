@@ -1,7 +1,92 @@
 package Ejercicios_antes_Examen;
 
+
 public class laberinto {
 
+    /**
+     * Función para pintar por consola los valores de una matriz de enteros
+     * @param matriz
+     *      */
+    public static void pintarMatriz(char[][] matriz) {
+        for(char i=0; i<matriz.length; i++) {
+            
+            for(int j=0; j<matriz[0].length; j++) {
+                if(matriz[i][j] <= 9){
+                    System.out.print("0" + matriz[i][j] + " ");
+                }else{
+                    System.out.print(matriz[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    // Inicializar el laberinto
+    public static void inicializarLaberinto(char[][] laberinto) {
+        for (int i = 0; i < laberinto.length; i++) {
+            for (int j = 0; j < laberinto[i].length; j++) {
+                // Rellenar con "."
+                laberinto[i][j] = '.';
+
+                // Rellenar los bordes
+                if (i == 0 || i == laberinto.length - 1) {
+                    laberinto[i][j] = '-';
+                }
+
+                if (j == 0 || j == laberinto[i].length - 1) {
+                    laberinto[i][j] = '|';
+                }
+            }
+        }
+    }
+
+    public static void generarBomba(char[][] laberinto) {
+        int fila, columna;
+        do {
+            fila = numaleatorio(1, 18);
+            columna = numaleatorio(1, 18);
+        } while (laberinto[fila][columna] == '#' || laberinto[fila][columna] == '@');
+
+        laberinto[fila][columna] = 'B'; // Marcar la bomba
+    }
+
+    public static int numaleatorio(int min, int max){
+
+        return (int) (Math.random() * (max - min + 1) + min);
+
+    }
+
+    //Generar salida de manera aleatoria
+
+    public static void generarsalida(char[][] laberinto){
+
+        for (int i = 0; i < laberinto.length; i++) {
+
+            for (int j = 0; j < laberinto[i].length; j++) {
+
+                int salidaBorde = numaleatorio(0, 3); // 0: superior, 1: derecho, 2: inferior, 3: izquierdo
+
+        switch (salidaBorde) {
+            case 0:
+                laberinto[0][numaleatorio(1, 18)] = '#'; // Salida en borde superior
+                break;
+            case 1:
+                laberinto[numaleatorio(1, 18)][19] = '#'; // Salida en borde derecho
+                break;
+            case 2:
+                laberinto[19][numaleatorio(1, 18)] = '#'; // Salida en borde inferior
+                break;
+            case 3:
+                laberinto[numaleatorio(1, 18)][0] = '#'; // Salida en borde izquierdo
+                break;
+                }
+            }
+                
+        }
+            
+    }
+
+    
     public static void main(String[] args) {
         
         /**
@@ -37,9 +122,29 @@ public class laberinto {
         encontrar la salida.
          */
 
-         
+        char [][] laberinto = new char[20][20];
 
+        // Inicializar el laberinto
+        inicializarLaberinto(laberinto);
 
+         //Pintar Laverinto
+
+        pintarMatriz(laberinto);
+
+        // Generar salida y bomba
+        generarsalida(laberinto);
+         //Pintar Laverinto
+
+        pintarMatriz(laberinto);
+        generarBomba(laberinto);
+
+       
+            
+        
+        
     }
-    
+
+
 }
+    
+
