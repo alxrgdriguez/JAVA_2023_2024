@@ -37,6 +37,11 @@ public class EjercicioMenu {
         return true;
     }
 
+    // Función para calcular la longitud de una circunferencia
+    private static double longitudCircunferencia(int radio) {
+        return 2 * Math.PI * radio;
+    }
+
     public static void main(String[] args) {
         
         /**
@@ -58,6 +63,7 @@ public class EjercicioMenu {
         int numero = 0;
         int sumaDigitos = 0;
         boolean esPrimoResultado = false;
+        double longitudResultado = 0.0;
 
         System.out.print("Introduce un numero: ");
         numero = Integer.parseInt(sc.nextLine());
@@ -103,6 +109,10 @@ public class EjercicioMenu {
                 break;
 
             case 3:
+
+                longitudResultado = longitudCircunferencia(numero);
+
+                System.out.println("La longitud de la circunferencia es " + longitudResultado);
                 
                 break;
 
