@@ -10,14 +10,18 @@ public class EjercicioMenu {
 
     }
 
-    public static int sumardigitos(int numero){
+   // Función para calcular la suma de los dígitos
+   private static int sumaDigitos(int numero) {
+    int suma = 0;
 
-        int contador = 0;
-
-
-        return contador;
-
+    while (numero != 0) {
+        suma += numero % 10;
+        numero /= 10;
     }
+
+    return suma;
+}
+
 
     public static void main(String[] args) {
         
@@ -38,6 +42,7 @@ public class EjercicioMenu {
 
         int opcion = 0;
         int numero = 0;
+        int sumaDigitos = 0;
 
         System.out.println("Introduce un numero: ");
         numero = Integer.parseInt(sc.nextLine());
@@ -64,8 +69,8 @@ public class EjercicioMenu {
         switch (opcion) {
             case 1:
                 
-                sumardigitos(numero);
-
+                sumaDigitos = sumaDigitos(numero);
+                System.out.println("La suma de los dígitos es: " + sumaDigitos);
                 break;
 
             case 2:
