@@ -56,6 +56,7 @@ public class EjercicioMenu {
             System.out.println("4. Salir");
             System.out.println("----------------");
             System.out.print("Introduce una opcion: ");
+            
 
             try {
                 opcion = Integer.parseInt(sc.nextLine());
@@ -63,10 +64,8 @@ public class EjercicioMenu {
                 System.out.println(e.getMessage());
                 System.out.println("La opcion debe ser un numero");
             }
-            
-        } while (opcion != 4);
 
-        switch (opcion) {
+            switch (opcion) {
             case 1:
                 
                 sumaDigitos = sumaDigitos(numero);
@@ -89,10 +88,11 @@ public class EjercicioMenu {
         
             default:
 
-                System.out.println("Opcion no valida");
+                System.out.println("La opcion " + opcion + " no es una opcion valida" );
                 break;
-        }
-
+            }   
+            
+        } while (opcion != 4);
 
     }
     
