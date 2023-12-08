@@ -4,6 +4,21 @@ import java.util.Scanner;
 
 public class EjercicioMenu {
 
+    public static int numaleatorio(int min, int max){
+
+        return (int) (Math.random() * (max - min + 1) + min);
+
+    }
+
+    public static int sumardigitos(int numero){
+
+        int contador = 0;
+
+
+        return contador;
+
+    }
+
     public static void main(String[] args) {
         
         /**
@@ -22,6 +37,10 @@ public class EjercicioMenu {
         Scanner sc = new Scanner(System.in);
 
         int opcion = 0;
+        int numero = 0;
+
+        System.out.println("Introduce un numero: ");
+        numero = Integer.parseInt(sc.nextLine());
 
         do {
 
@@ -45,6 +64,8 @@ public class EjercicioMenu {
         switch (opcion) {
             case 1:
                 
+                sumardigitos(numero);
+
                 break;
 
             case 2:
