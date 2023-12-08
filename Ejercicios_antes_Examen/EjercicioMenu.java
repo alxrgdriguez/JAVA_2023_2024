@@ -14,14 +14,28 @@ public class EjercicioMenu {
    private static int sumaDigitos(int numero) {
     int suma = 0;
 
-    while (numero != 0) {
-        suma += numero % 10;
-        numero /= 10;
-    }
+        while (numero != 0) {
+            suma += numero % 10;
+            numero /= 10;
+        }
 
     return suma;
-}
+    }
 
+    //Funcion para decir si el numero introducido es primo o no
+    private static boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+    
+        for (int i = 2; i <= numero / 2; i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+    
+        return true;
+    }
 
     public static void main(String[] args) {
         
@@ -43,8 +57,9 @@ public class EjercicioMenu {
         int opcion = 0;
         int numero = 0;
         int sumaDigitos = 0;
+        boolean esPrimoResultado = false;
 
-        System.out.println("Introduce un numero: ");
+        System.out.print("Introduce un numero: ");
         numero = Integer.parseInt(sc.nextLine());
 
         do {
@@ -73,6 +88,17 @@ public class EjercicioMenu {
                 break;
 
             case 2:
+
+                esPrimoResultado = esPrimo(numero);
+
+                if(esPrimoResultado == true){
+
+                    System.out.println("El numero es primo");
+
+                }else{
+
+                    System.out.println("El numero no es primo");
+                }
                 
                 break;
 
