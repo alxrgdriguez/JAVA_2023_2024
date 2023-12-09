@@ -41,6 +41,7 @@ public class EjercicioCadenas {
         System.out.println("\n--- CADENA REMPLAZADA ---");
         System.out.println(remplazada);
 
+        sc.close();
     }
     
 }
