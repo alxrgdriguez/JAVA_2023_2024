@@ -1,5 +1,7 @@
 package Ejercicios_antes_Examen;
 
+import java.util.Scanner;
+
 public class EjercicioCadenas {
 
     public static void main(String[] args) {
@@ -14,6 +16,30 @@ public class EjercicioCadenas {
            frase“Quiero IRR a vivIRR cerca del GuadalquivIRR”
          */
 
+        Scanner sc = new Scanner(System.in);
+
+        String frase = "";
+        String cadena1 = "";
+        String cadena2 = "";
+
+
+        System.out.print("Dime una frase: ");
+        frase = sc.nextLine();
+
+        System.out.print("Introduce la primera cadena: ");
+        cadena1 = sc.nextLine();
+
+        System.out.println("Introduce la segunda cadena: ");
+        cadena2 = sc.nextLine();
+
+        // Reemplazar todas las apariciones de la primera cadena por la segunda cadena
+        String remplazada = frase.replace(cadena1, cadena2);
+
+        System.out.println("\n--- CADENA SIN MODIFICAR ---");
+        System.out.println(frase);
+
+        System.out.println("\n--- CADENA REMPLAZADA ---");
+        System.out.println(remplazada);
 
     }
     
