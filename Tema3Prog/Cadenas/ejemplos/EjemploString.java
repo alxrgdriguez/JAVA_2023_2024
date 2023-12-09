@@ -1,3 +1,5 @@
+package Tema3Prog.Cadenas.ejemplos;
+
 public class EjemploString {
     
     public static void main(String[] args) {

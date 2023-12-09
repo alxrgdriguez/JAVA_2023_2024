@@ -1,3 +1,5 @@
+package Tema3Prog.Cadenas.ejemplos;
+
 import java.util.Scanner;
 public class EjemploStringBuffer {
     
