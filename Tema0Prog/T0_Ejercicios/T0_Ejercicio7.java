@@ -1,3 +1,5 @@
+package Tema0Prog.T0_Ejercicios;
+
 public class T0_Ejercicio7 {
 
     // 7. ¿Por qué no compila el siguiente programa? Modifícalo para hacer que funcione.

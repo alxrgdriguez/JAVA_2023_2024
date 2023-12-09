@@ -1,4 +1,4 @@
-package ejemplos_T1;
+package Tema1Prog.ejemplos_T1;
 public class ejemplosuma {
 
     public static void main(String[] args) {

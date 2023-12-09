@@ -1,3 +1,4 @@
+package Juegos_clase;
 
 public class ejercicioClase1 {
 

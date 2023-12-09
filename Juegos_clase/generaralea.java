@@ -1,3 +1,5 @@
+package Juegos_clase;
+
 public class generaralea {
 
     public static int numaleatorio(int min, int max) throws Exception{

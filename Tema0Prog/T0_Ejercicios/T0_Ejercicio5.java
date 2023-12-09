@@ -1,3 +1,5 @@
+package Tema0Prog.T0_Ejercicios;
+
 public class T0_Ejercicio5 {
 
     public static void main(String[] args) {

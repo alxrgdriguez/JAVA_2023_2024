@@ -1,3 +1,5 @@
+package Tema0Prog.T0_Ejercicios;
+
 import java.util.Random;
 
 public class T0_Ejercicio14 {

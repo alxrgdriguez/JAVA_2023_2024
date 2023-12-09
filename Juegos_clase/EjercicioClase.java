@@ -1,3 +1,5 @@
+package Juegos_clase;
+
 import java.util.Scanner;
 
 public class EjercicioClase {

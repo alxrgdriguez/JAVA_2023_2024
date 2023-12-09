@@ -1,3 +1,5 @@
+package Tema0Prog.T0_Ejercicios;
+
 class T0_Ejercicio8{
 
     static int n1=50;
