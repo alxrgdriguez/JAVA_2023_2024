@@ -40,16 +40,6 @@ public class laberinto {
         }
     }
 
-    public static void generarBomba(char[][] laberinto) {
-        int fila, columna;
-        do {
-            fila = numaleatorio(1, 18);
-            columna = numaleatorio(1, 18);
-        } while (laberinto[fila][columna] == '#' || laberinto[fila][columna] == '@');
-
-        laberinto[fila][columna] = 'B'; // Marcar la bomba
-    }
-
     public static int numaleatorio(int min, int max){
 
         return (int) (Math.random() * (max - min + 1) + min);
@@ -58,34 +48,8 @@ public class laberinto {
 
     //Generar salida de manera aleatoria
 
-    public static void generarsalida(char[][] laberinto){
-
-        for (int i = 0; i < laberinto.length; i++) {
-
-            for (int j = 0; j < laberinto[i].length; j++) {
-
-                int salidaBorde = numaleatorio(0, 3); // 0: superior, 1: derecho, 2: inferior, 3: izquierdo
-
-        switch (salidaBorde) {
-            case 0:
-                laberinto[0][numaleatorio(1, 18)] = '#'; // Salida en borde superior
-                break;
-            case 1:
-                laberinto[numaleatorio(1, 18)][19] = '#'; // Salida en borde derecho
-                break;
-            case 2:
-                laberinto[19][numaleatorio(1, 18)] = '#'; // Salida en borde inferior
-                break;
-            case 3:
-                laberinto[numaleatorio(1, 18)][0] = '#'; // Salida en borde izquierdo
-                break;
-                }
-            }
-                
-        }
-            
-    }
-
+        
+    
     
     public static void main(String[] args) {
         
@@ -131,12 +95,6 @@ public class laberinto {
 
         pintarMatriz(laberinto);
 
-        // Generar salida y bomba
-        generarsalida(laberinto);
-         //Pintar Laverinto
-
-        pintarMatriz(laberinto);
-        generarBomba(laberinto);
 
        
             
