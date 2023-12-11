@@ -107,20 +107,6 @@ public class Ejercicio1 {
 
     }
 
-    public static void filaordenada(int[][] matriz){
-
-        for (int i = 0; i < matriz.length; i++) {
-
-            for (int j = 0; j < matriz[i].length; j++) {
-                
-                Arrays.sort(matriz);
-                System.out.println(Arrays.toString(matriz));
-
-            }
-            
-        }
-
-    }
 
 
 
@@ -261,7 +247,7 @@ public class Ejercicio1 {
 
             case 6:
 
-                filaordenada(matriz);
+               // filaordenada(matriz);
             
                 break;
 
