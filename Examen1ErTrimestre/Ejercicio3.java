@@ -49,10 +49,7 @@ public class Ejercicio3 {
         una palabra, y cuando lo tengas prueba a hacerlo con más de una palabra.
          */
 
-        String frase = "Hola mundo";
-
-        System.out.print("La frase " + frase + " escrito en codigo morse es: ");
-        System.out.println(convertirAMorse(frase));
+        System.out.println(convertirAMorse("w"));
          
     
         }

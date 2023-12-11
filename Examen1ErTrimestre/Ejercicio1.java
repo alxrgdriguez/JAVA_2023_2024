@@ -46,12 +46,10 @@ public class Ejercicio1 {
     public static int sumarDiagonalI(int[][] matriz){
 
         int resultado = 0;
+       
+        
 
-        for (int i = 0; i < matriz[0].length; i++) {
 
-            resultado += matriz[i][i];
-            
-        }
 
         return resultado;
 
@@ -92,32 +90,54 @@ public class Ejercicio1 {
     }
 
 
-    public static void matriztranspuesta(int[][] matriz){
+   
+    public static void transpuesta (int[][] matriz) {
+    
+    int[][] temp = new int[matriz[0].length][matriz.length];
+
+
+    for (int i = 0; i < matriz[0].length; i++) {
+        
+      for (int j = 0; j < matriz.length; j++) {
+        
+        temp[i][j] = matriz[j][i];
+
+      }
+
+    }
+
+    System.out.println("--- TRANSPUESTA ---");
+    pintarMatriz(matriz);
+
+  }
+
+
+    public static void intercambiaFilas (int[][] matriz, int num1, int num2) {
+    
+        //Nos creamos unas variable temporal para guardar el valor de la posicion [0] y que después no se nos pierda
+        int[] temp = new int[matriz[0].length];
 
         for (int i = 0; i < matriz[0].length; i++) {
 
-            for (int j = 0; j < matriz.length; j++) {
-             
-                matriz[i][j] = matriz[j][i];
-            }
-            
+            temp[i] = matriz[num1][i];
+            matriz[num1][i] = matriz[num2][i];
+            matriz[num2][i] = temp[i];
         }
 
-        System.out.println(" \n--- MATRIZ TRANSPUESTA ----");
-
+        System.out.println(" -- INTERCAMBIO DE FILAS ---");
         pintarMatriz(matriz);
 
-    }
+  }
 
-    public static int[][] cambiarfila(int[][] matriz, int num1, int num2){
+  
+    public static void ordenarfilas (int[][] matriz) {
 
+     
         
-        
+        System.out.println("Matriz despues de ordenar filas:");
+        pintarMatriz(matriz);
 
-        return matriz;
-
-
-    }
+  }
 
 
 
@@ -142,7 +162,6 @@ public class Ejercicio1 {
 
         int[][] matriz = new int[20][20];
         int opcion = 0;
-
 
         //Rellenamos el tablero
         for (int i = 0; i < matriz.length; i++) {
@@ -209,6 +228,8 @@ public class Ejercicio1 {
                 }
                 } while (num2 < 0 || num2 > 100);
 
+                intercambiaFilas(matriz, num1, num2);
+
                 break;
 
             case 2:
@@ -253,7 +274,7 @@ public class Ejercicio1 {
 
             case 5:
 
-                matriztranspuesta(matriz);
+                transpuesta(matriz);
             
                 break;
 
