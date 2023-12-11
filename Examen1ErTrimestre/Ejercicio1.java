@@ -107,7 +107,21 @@ public class Ejercicio1 {
 
     }
 
- 
+    public static void filaordenada(int[][] matriz){
+
+        for (int i = 0; i < matriz.length; i++) {
+
+            for (int j = 0; j < matriz[i].length; j++) {
+                
+                Arrays.sort(matriz);
+                System.out.println(Arrays.toString(matriz));
+
+            }
+            
+        }
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -247,7 +261,7 @@ public class Ejercicio1 {
 
             case 6:
 
-                //System.out.println("Fila ordenada de mayor a menor: " + filaordenada(matriz));
+                filaordenada(matriz);
             
                 break;
 
