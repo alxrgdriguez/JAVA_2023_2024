@@ -28,8 +28,10 @@ public class Ejercicio2 {
          */
 
         Scanner sc = new Scanner(System.in);
-         
-        int nTurnos = 0;
+        
+        boolean ganado = false;
+        int nTurnos = 10;
+        int sumarTiradas = 0;
         int contadorJ1 = 0;
         int contadorJ2 = 0;
         int tiradaJ1 = 0;
@@ -37,18 +39,24 @@ public class Ejercicio2 {
 
     
 
-        
 
-            tiradaJ1 = generarNumero(1, 12);
-                System.out.println("Jugador 1: " + tiradaJ1);
-            tiradaJ2 = generarNumero(1, 12);
-                System.out.println("Jugador 2: " + tiradaJ2);
+        for (int i = 0; i < nTurnos; i++) {
+            
+            do {
 
-            if (tiradaJ1 == 7 || tiradaJ1 == 11) {
+            tiradaJ1 = generarNumero(1, 6);
+            tiradaJ2 = generarNumero(1, 6);
+
+            sumarTiradas = (tiradaJ1 + tiradaJ2);
+
+            System.out.println(sumarTiradas);
                 
-                contadorJ1++;
-                System.out.println("Jugador 1 ha ganado 1 punto");
-                System.out.println("Ahora Jugador 1 dispone de " + contadorJ1 + " puntos");
+            
+            if (tiradaJ1 == 7 || tiradaJ1 == 11) {
+            
+            contadorJ1++;
+            System.out.println("Jugador 1 ha ganado 1 punto");
+            System.out.println("Ahora Jugador 1 dispone de " + contadorJ1 + " puntos");
 
             }else if(tiradaJ2 == 7 || tiradaJ2 == 11){
 
@@ -63,8 +71,10 @@ public class Ejercicio2 {
             }else if(tiradaJ2 == 2 || tiradaJ2 == 3 || tiradaJ2 == 12){
 
                 System.out.println("Ahora Jugador 2 dispone de " + contadorJ2 + " puntos");
+            }
 
-            
+            } while (!ganado);
+        
         
         }     
         
