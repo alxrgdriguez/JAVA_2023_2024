@@ -1,6 +1,19 @@
 package Examen1ErTrimestre;
 
+import java.util.Scanner;
+
 public class Ejercicio2 {
+
+    /**
+     * Función que genera un número aleatorio entre un valor mínimo y máximo
+     * @param min
+     * @param max
+     * @return número aleatorio entre min y max, incluidos
+     */
+    public static int generarNumero(int min, int max)  {
+        return  (int) ((Math.random() * (max - min + 1) + min)) ;
+    }
+
 
     public static void main(String[] args) {
         
@@ -14,10 +27,61 @@ public class Ejercicio2 {
         gana cada uno.
          */
 
+        Scanner sc = new Scanner(System.in);
          
+        int nTurnos = 0;
+        int contadorJ1 = 0;
+        int contadorJ2 = 0;
+        int tiradaJ1 = 0;
+        int tiradaJ2 = 0;
+
+        
 
 
+        System.out.println("Introduce el numero de turnos que deseas jugar: ");
+        nTurnos = Integer.parseInt(sc.nextLine());
+
+        for (int i = 1; i <= nTurnos; i++) {
+
+            System.out.println("\n--------");
+            System.out.println("Turno " + i);
+            System.out.println("--------");
+            System.out.println();
+
+            tiradaJ1 = generarNumero(1, 12);
+                System.out.println("Jugador 1: " + tiradaJ1);
+            tiradaJ2 = generarNumero(1, 12);
+                System.out.println("Jugador 2: " + tiradaJ2);
+
+            if (tiradaJ1 == 7 || tiradaJ1 == 11) {
+                
+                contadorJ1++;
+                System.out.println("Jugador 1 ha ganado 1 punto");
+                System.out.println("Ahora Jugador 1 dispone de " + contadorJ1 + " puntos");
+
+            }else if(tiradaJ2 == 7 || tiradaJ2 == 11){
+
+                contadorJ2++;
+                System.out.println("Jugador 2 ha ganado 1 punto");
+                System.out.println("Ahora Jugador 2 dispone de " + contadorJ2 + " puntos");
+
+            }else if(tiradaJ1 == 2 || tiradaJ1 == 3 || tiradaJ1 == 12){
+
+                System.out.println("Ahora Jugador 1 dispone de " + contadorJ1 + " puntos");
+
+            }else if(tiradaJ2 == 2 || tiradaJ2 == 3 || tiradaJ2 == 12){
+
+                System.out.println("Ahora Jugador 2 dispone de " + contadorJ2 + " puntos");
+
+            }
+        
+        }     
+        
+        System.out.println("La suma total de puntos de Jugador 1 ha sido de: " + contadorJ1);
+        System.out.println("La suma total de puntos de Jugador 2 ha sido de: " + contadorJ2);
 
     }
-    
+
 }
+    
+
