@@ -35,18 +35,9 @@ public class Ejercicio2 {
         int tiradaJ1 = 0;
         int tiradaJ2 = 0;
 
+    
+
         
-
-
-        System.out.println("Introduce el numero de turnos que deseas jugar: ");
-        nTurnos = Integer.parseInt(sc.nextLine());
-
-        for (int i = 1; i <= nTurnos; i++) {
-
-            System.out.println("\n--------");
-            System.out.println("Turno " + i);
-            System.out.println("--------");
-            System.out.println();
 
             tiradaJ1 = generarNumero(1, 12);
                 System.out.println("Jugador 1: " + tiradaJ1);
@@ -73,7 +64,7 @@ public class Ejercicio2 {
 
                 System.out.println("Ahora Jugador 2 dispone de " + contadorJ2 + " puntos");
 
-            }
+            
         
         }     
         

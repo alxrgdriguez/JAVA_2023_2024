@@ -103,7 +103,19 @@ public class Ejercicio1 {
             
         }
 
-        System.out.println(Arrays.toString(matriz));
+        System.out.println(" \n--- MATRIZ TRANSPUESTA ----");
+
+        pintarMatriz(matriz);
+
+    }
+
+    public static int[][] cambiarfila(int[][] matriz, int num1, int num2){
+
+        
+        
+
+        return matriz;
+
 
     }
 
