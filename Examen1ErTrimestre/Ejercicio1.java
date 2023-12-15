@@ -2,6 +2,7 @@ package Examen1ErTrimestre;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Ejercicio1 {
@@ -280,7 +281,14 @@ public class Ejercicio1 {
 
             case 6:
 
-               // filaordenada(matriz);
+               for (int i = 0; i < matriz.length; i++) {
+                    Arrays.sort(matriz[i]);
+
+
+               }
+
+               System.out.println("MATRIZ ORDENADA");
+               pintarMatriz(matriz);
             
                 break;
 
