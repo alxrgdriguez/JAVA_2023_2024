@@ -32,13 +32,12 @@ public class Ejercicio3 {
 
             area = B * A;
             System.out.println("La base del rectángulo es: " + area + " cm" );
-            
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Error al introducir la base y la altura");
         }
-      
-        
+
         
         sc.close();
     }
