@@ -36,6 +36,8 @@ public class Ejercicio2 {
         String esAprobado = (nota >= 5) ? "APROBADO" : "SUSPENSO";
         System.out.println(esAprobado);
 
+        sc.close();
+
     }
     
 }
