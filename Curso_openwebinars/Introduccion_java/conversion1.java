@@ -31,7 +31,7 @@ class conversion{
         System.out.printf("%.2f", f2);
         System.out.println("\n");
 
-        //Conversion con perdida de informacion de long a double
+        //Conversion sin perdida de informacion de long a double
 
         double d2 = l2;
         System.out.println("Conversion de long --> double");
@@ -64,7 +64,7 @@ class conversion{
         System.out.println("\n");
 
         //Conversion explícita de double --> float
-        double d3 = 123456.789;
+        double d3 = 123456.78565;
         float f3 = (float) d3;
         System.out.println("Conversion de double --> float");
         System.out.println("Valor d3: " + d3);
