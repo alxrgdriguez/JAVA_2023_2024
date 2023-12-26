@@ -71,6 +71,10 @@ class conversion{
         System.out.println("Pasado a float: " + f3);
         
 
+        final double PI = 3.1416;  //Variable constante no cambia su valor, el valor final es 39 no te puede cambiar
+
+       //temp = 50; 
+
 
         
 
