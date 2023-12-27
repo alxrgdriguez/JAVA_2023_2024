@@ -10,7 +10,19 @@ public class Ejercicio4 {
          * como un valor inicial de la variable correspondiente.
          */
 
-         
+        double radio = 12.5;
+        double perimetro;
+        double area;
+
+        //Calculamos perimetro
+
+        perimetro = 2 * Math.PI * radio;
+        System.out.println("El perimetro es: " + Math.round(perimetro));
+
+        //Calculamos area
+        area = Math.PI * Math.pow(radio, 2);
+        System.out.println("El area es: " + Math.round(area));
+
 
 
     }
