@@ -1,4 +1,4 @@
-package Curso_openwebinars.Introduccion_java;
+package Curso_openwebinars.Introduccion_java.EjerciciosVariables;
 
 import java.util.Scanner;
 
