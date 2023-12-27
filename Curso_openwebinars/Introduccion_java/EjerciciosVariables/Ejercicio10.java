@@ -12,11 +12,12 @@ public class Ejercicio10 {
          * espacio inicial de 150.000 km y se mueve a una velocidad 17 km por segundo.
          */
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        int tiempoSegundos = 0;
 
         // Pedir al usuario que ingrese el tiempo en segundos
         System.out.print("Ingresa el tiempo en segundos: ");
-        int tiempoSegundos = scanner.nextInt();
+        tiempoSegundos = Integer.parseInt(sc.nextLine());
 
         // Velocidad constante en Km/s
         double velocidad = 17.0;
@@ -31,7 +32,7 @@ public class Ejercicio10 {
         System.out.println("El espacio recorrido en " + tiempoSegundos + " segundos es: " + espacioRecorrido + " km");
 
         // Cerrar el scanner
-        scanner.close();
+        sc.close();
     }
     
 }
