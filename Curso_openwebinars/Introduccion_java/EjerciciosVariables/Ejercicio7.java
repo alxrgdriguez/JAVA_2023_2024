@@ -36,6 +36,8 @@ public class Ejercicio7 {
         System.out.println("La division es: " + division);
         System.out.println("Y el resto es: " + resto);
 
+        sc.close();
+
     }
     
 }
