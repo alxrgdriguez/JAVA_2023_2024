@@ -1,5 +1,7 @@
 package Curso_openwebinars.Introduccion_java.EjerciciosVariables;
 
+import java.util.Scanner;
+
 public class Ejercicio10 {
 
     public static void main(String[] args) {
@@ -10,18 +12,26 @@ public class Ejercicio10 {
          * espacio inicial de 150.000 km y se mueve a una velocidad 17 km por segundo.
          */
 
-         // Datos del problema
-        double espacioInicialKm = 150000.0; // Espacio inicial en kilómetros
-        double velocidadKmps = 17.0; // Velocidad en kilómetros por segundo
-        double tiempoSegundos = 0.0; // Tiempo en segundos (inicialmente 0)
+        Scanner scanner = new Scanner(System.in);
 
-        // Calcular el espacio recorrido utilizando la fórmula: espacio = velocidad * tiempo
-        double espacioRecorridoKm = velocidadKmps * tiempoSegundos;
+        // Pedir al usuario que ingrese el tiempo en segundos
+        System.out.print("Ingresa el tiempo en segundos: ");
+        int tiempoSegundos = scanner.nextInt();
 
-        // Imprimir el espacio recorrido inicial
-        System.out.println("Espacio recorrido inicial: " + espacioRecorridoKm + " km");
+        // Velocidad constante en Km/s
+        double velocidad = 17.0;
 
+        // Espacio inicial en Km
+        double espacioInicial = 150000.0;
 
+        // Calcular el espacio recorrido usando la fórmula: espacio = espacio inicial + (velocidad * tiempo)
+        double espacioRecorrido = espacioInicial + (velocidad * tiempoSegundos);
+
+        // Mostrar el resultado
+        System.out.println("El espacio recorrido en " + tiempoSegundos + " segundos es: " + espacioRecorrido + " km");
+
+        // Cerrar el scanner
+        scanner.close();
     }
     
 }
