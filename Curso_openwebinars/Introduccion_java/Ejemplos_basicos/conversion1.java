@@ -1,4 +1,4 @@
-package Curso_openwebinars.Introduccion_java;
+package Curso_openwebinars.Introduccion_java.Ejemplos_basicos;
 class conversion{
 
     public static void main(String[] args) {

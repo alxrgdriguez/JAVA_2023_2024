@@ -1,4 +1,4 @@
-package Curso_openwebinars.Introduccion_java;
+package Curso_openwebinars.Introduccion_java.Ejemplos_basicos;
 
 import java.util.Locale;
 import java.util.Scanner;
