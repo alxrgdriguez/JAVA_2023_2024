@@ -53,7 +53,7 @@ public class Ejercicio2 {
                 break;
         }
 
-
+        sc.close();
     }
     
 }
