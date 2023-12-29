@@ -14,8 +14,8 @@ public class Ejercicio2 {
         Scanner sc = new Scanner(System.in);
         int diaSemana = 0;
        
-            System.out.print("Introduce el dia de la semana y te diré si es (Lunes, Martes, Miercoles, Jueves...): ");
-            diaSemana = Integer.parseInt(sc.nextLine());
+        System.out.print("Introduce el dia de la semana y te diré si es (Lunes, Martes, Miercoles, Jueves...): ");
+        diaSemana = Integer.parseInt(sc.nextLine());
 
         
         switch (diaSemana) {
