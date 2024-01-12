@@ -21,6 +21,7 @@ public class SteamJuego {
         this.puestosMasVendidos = puestosMasVendidos;
     }
 
+
     //Getters and Setters
 
     public String getNombre() {
@@ -69,5 +70,12 @@ public class SteamJuego {
 
     public void setPuestosMasVendidos(int puestosMasVendidos) {
         this.puestosMasVendidos = puestosMasVendidos;
+    }
+
+    //Metodos
+
+    public void jugadoresDia(int jugadoresHoy){
+
+        mediaJugadoresDiarios = ((mediaJugadoresDiarios * diasDesdeSalida) + jugadoresHoy) / (diasDesdeSalida + 1);
     }
 }
