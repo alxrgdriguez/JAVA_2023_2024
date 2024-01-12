@@ -63,7 +63,7 @@ public class Satelite {
     }
 
     public boolean enOrbita(){
-        if (distancia_tierra == paralelo){
+        if (distancia_tierra < 0){
             return false;
         }else{
             return true;
@@ -72,8 +72,8 @@ public class Satelite {
 
     public void variablePosicion(double variap, double variam){
 
-        meridiano = variam;
-        paralelo = variap;
+        meridiano += variam;
+        paralelo += variap;
 
     }
 
