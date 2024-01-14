@@ -19,7 +19,15 @@ public class TestAhorcado {
             System.out.println("Opcion 2: probarPalabra");
             System.out.println("Opcion 3: Salir");
             System.out.print("\nElige una opcion: ");
-            opcion = Integer.parseInt(sc.nextLine());
+            try {
+                opcion = Integer.parseInt(sc.nextLine());
+
+            }catch (Exception e){
+
+                System.out.println("Ha ocurrido un error!");
+                opcion=0;
+            }
+
 
             switch (opcion){
 
@@ -63,7 +71,7 @@ public class TestAhorcado {
 
                 default:
 
-                    System.out.println("Opcion no valida!!");
+                    System.out.println("Opcion no valida!!\n");
                     break;
             }
 
