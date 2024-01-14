@@ -9,11 +9,12 @@ public class TestAhorcado {
         Ahorcado a1 = new Ahorcado();
         int opcion = 0;
 
-        System.out.println("------- AHORCADO -------");
-        System.out.println("La palabra tiene: " + a1.getPalabraAdivinar().length() + " carácteres");
+
+        System.out.println(" ******* --- JUEGO DEL AHORCADO --- *******");
+        System.out.println("La palabra tiene: " + a1.getPalabraAdivinar().length() + " carácteres\n");
 
         do{
-            System.out.println(" ------ Menu ------");
+            System.out.println("------- AHORCADO -------");
             System.out.println("Opcion 1: probarLetra");
             System.out.println("Opcion 2: probarPalabra");
             System.out.println("Opcion 3: Salir");
@@ -24,7 +25,7 @@ public class TestAhorcado {
 
                 case 1:
                     char letra = ' ';
-                    System.out.println("Introduce una letra: ");
+                    System.out.print("\nIntroduce una letra: ");
                     letra = sc.nextLine().charAt(0);
                     System.out.println("Letra introducida: " + letra);
                     if (a1.probarLetra(letra) == true){
@@ -40,7 +41,19 @@ public class TestAhorcado {
                     break;
 
                 case 2:
+                    String palabra = "";
+                    System.out.print("\nIntroduce una palabra: ");
+                    palabra = sc.nextLine();
 
+                    if (a1.probarPalabra(palabra) == true){
+
+                        System.out.println("ENHORABUENA!!! HAS ACERTADO LA PALABRA :D");
+                        System.exit(0);
+                    }else {
+
+                        System.out.println("HAS PERDIDO!! LA PALABRA ERA --> " + a1.getPalabraAdivinar());
+                        System.exit(0);
+                    }
                     break;
 
                 case 3:
