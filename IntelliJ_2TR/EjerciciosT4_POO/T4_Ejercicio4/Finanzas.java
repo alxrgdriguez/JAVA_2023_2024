@@ -12,6 +12,7 @@ public class Finanzas {
     }
 
     public Finanzas(double dola_euro) {
+
         this.dola_euro = dola_euro;
     }
 
