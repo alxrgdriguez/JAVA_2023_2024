@@ -10,8 +10,8 @@ public class TestAhorcado {
         int opcion = 0;
 
 
-        System.out.println(" ******* --- JUEGO DEL AHORCADO --- *******");
-        System.out.println("La palabra tiene: " + a1.getPalabraAdivinar().length() + " carácteres\n");
+        System.out.println("  --- LETRAS AHORCADO --- ");
+        System.out.println("La palabra tiene: " + a1.getPalabraAdivinar().length() + " letras\n");
 
         do{
             System.out.println("------- AHORCADO -------");
@@ -24,8 +24,9 @@ public class TestAhorcado {
 
             }catch (Exception e){
 
-                System.out.println("Ha ocurrido un error!");
+                System.out.println("Ha ocurrido un error, vuelva a inciar el juego!");
                 opcion=0;
+                break;
             }
 
 
@@ -66,7 +67,7 @@ public class TestAhorcado {
 
                 case 3:
 
-                    System.out.println("Adios");
+                    System.out.println("Gracias por jugar al juego del Ahorcado, vuelva pronto!");
                     break;
 
                 default:
@@ -76,7 +77,7 @@ public class TestAhorcado {
             }
 
             if(a1.getNumFallos() == 7){
-                System.out.println("Has superado el limite de intentos");
+                System.out.println("Has superado el limite de intentos, gracias por jugar!");
                 break;
             }
 
