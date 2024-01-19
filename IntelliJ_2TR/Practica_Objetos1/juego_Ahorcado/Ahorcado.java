@@ -1,4 +1,4 @@
-package IntelliJ_2TR.Practica_Objetos1.juegoAhorcado;
+package IntelliJ_2TR.Practica_Objetos1.juego_Ahorcado;
 
 public class Ahorcado {
 
