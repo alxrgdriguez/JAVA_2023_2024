@@ -5,19 +5,25 @@ public class Jugador {
     //Propiedades
 
     private String nombre;
-    public enum Clase {MAGO,BRUJO,BARBARO,CABALLERO}
-    private int nivel = 1;
-    private int experiencia = 0;
-    private double salud = 200;
-    private Arma armaDerecha = null;
-    private Arma armaIzquierda = null;
+
+    public enum Clase {MAGO, BRUJO, BARBARO, CABALLERO}
+
+    private int nivel;
+    private int experiencia;
+    private double salud ;
+    private Arma armaDerecha;
+    private Arma armaIzquierda;
 
     //Constructor
 
     public Jugador(String nombre) {
         this.nombre = nombre;
+        this.nivel = 1;
+        this.experiencia = 0;
+        this.salud = 200;
+        this.armaDerecha = null;
+        this.armaIzquierda = null;
     }
-
 
     //Getters and Setters
 
@@ -57,17 +63,11 @@ public class Jugador {
         return armaDerecha;
     }
 
-    public void setArmaDerecha(Arma armaDerecha) {
-        this.armaDerecha = armaDerecha;
-    }
 
     public Arma getArmaIzquierda() {
         return armaIzquierda;
     }
 
-    public void setArmaIzquierda(Arma armaIzquierda) {
-        this.armaIzquierda = armaIzquierda;
-    }
 
     //toString
     @Override
@@ -108,14 +108,39 @@ public class Jugador {
     /**
      * Método para equipar un arma, ya sea en la mano derecha o en la mano izquierda
      */
-    public boolean equipar(Arma arma){
+    public boolean equipar(Arma arma) {
+
+        //Primer caso -->
+        //1.Si el arma derecha está libre
+        //2.Si el arma izquierda está libre
+        //3.Si están ocupados los dos
 
         boolean estaEquipada = false;
 
+        if (this.armaDerecha == null){
+
+            this.armaDerecha = arma;
+            return estaEquipada = true;
+
+        } else if (this.armaIzquierda == null) {
+
+            this.armaIzquierda = arma;
+            return  estaEquipada = true;
+
+        }else{
+
+            System.out.println("No se puede equipar el arma");
+            return estaEquipada;
+        }
+
+        //Segundo caso -->
+        //1. Comprobar si el arma está libre a dos manos
+        //2. Solo se puede poner si están libres las dos manos
+        //3. Si estan libres las dos se pondrá la misma arma
+        // Importante: Se empieza equipar por la derecha
 
 
 
 
-        return estaEquipada;
     }
 }
