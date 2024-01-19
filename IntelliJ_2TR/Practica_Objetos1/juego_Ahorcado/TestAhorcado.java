@@ -1,4 +1,4 @@
-package IntelliJ_2TR.Practica_Objetos1;
+package IntelliJ_2TR.Practica_Objetos1.juegoAhorcado;
 
 import java.util.Scanner;
 
