@@ -26,7 +26,7 @@ public class Finanzas {
 
     public double eurosToDolares(double euros){
 
-        return this.dola_euro * euros;
+        return this.dola_euro / euros;
     }
 
     //Getters and Setters

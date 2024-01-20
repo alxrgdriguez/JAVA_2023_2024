@@ -99,7 +99,7 @@ public class Jugador {
         // Actualizamos la salud
         this.salud = nuevaSalud;
 
-        // Comprueba si el nivel es máximo
+        // Comprueba si el nivel es máximo a 10
         if (this.nivel > 10) {
             this.nivel = 10;
         }
@@ -110,37 +110,82 @@ public class Jugador {
      */
     public boolean equipar(Arma arma) {
 
-        //Primer caso -->
-        //1.Si el arma derecha está libre
-        //2.Si el arma izquierda está libre
-        //3.Si están ocupados los dos
-
         boolean estaEquipada = false;
 
-        if (this.armaDerecha == null){
-
-            this.armaDerecha = arma;
-            return estaEquipada = true;
-
-        } else if (this.armaIzquierda == null) {
-
-            this.armaIzquierda = arma;
-            return  estaEquipada = true;
-
-        }else{
-
-            System.out.println("No se puede equipar el arma");
-            return estaEquipada;
-        }
-
-        //Segundo caso -->
+        //Primer caso -->
         //1. Comprobar si el arma está libre a dos manos
         //2. Solo se puede poner si están libres las dos manos
         //3. Si estan libres las dos se pondrá la misma arma
         // Importante: Se empieza equipar por la derecha
 
+        if (arma.isDosManos() == true){
 
+            if (this.armaDerecha == null && this.armaIzquierda == null){
 
+                this.armaDerecha = arma;
+                this.armaIzquierda = arma;
+                estaEquipada = true;
+            }
+        }else {
+
+            //Segundo caso -->
+            //1.Si el arma derecha está libre
+            //2.Si el arma izquierda está libre
+            //3.Si están ocupados los dos
+
+            if (this.armaDerecha == null){
+
+                this.armaDerecha = arma;
+                estaEquipada = true;
+
+            } else if (this.armaIzquierda == null) {
+
+                this.armaIzquierda = arma;
+                estaEquipada = true;
+
+            }
+        }
+        if (estaEquipada == false){
+            System.out.println("No se puede equipar el arma");
+
+        }
+        return estaEquipada;
 
     }
+
+    public void tomarPocion(int puntosS){
+
+        double vidaTotal = this.salud + puntosS;
+
+        if (vidaTotal > 10000){
+
+            this.salud = 10000;
+
+        }else {
+
+            this.salud = vidaTotal;
+        }
+
+    }
+
+    public boolean reducirVida(int puntosD){
+
+        boolean estaMuerto = false;
+        double vidaTotal = this.salud - puntosD;
+
+        if (vidaTotal <= 0){
+
+            this.salud = 0.0;
+            estaMuerto = true;
+
+        }else {
+
+            this.salud = vidaTotal;
+        }
+
+        return estaMuerto;
+    }
+
+
+
 }
