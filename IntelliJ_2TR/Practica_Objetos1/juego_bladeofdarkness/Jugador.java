@@ -97,7 +97,7 @@ public class Jugador {
         double nuevaSalud = 2.5 * Math.pow(this.nivel, 2);
 
         // Actualizamos la salud
-        this.salud = nuevaSalud;
+        this.salud += nuevaSalud;
 
         // Comprueba si el nivel es máximo a 10
         if (this.nivel > 10) {
@@ -177,6 +177,7 @@ public class Jugador {
 
             this.salud = 0.0;
             estaMuerto = true;
+            System.out.println(this.getNombre() + " ha muerto!!!");
 
         }else {
 
@@ -185,6 +186,47 @@ public class Jugador {
 
         return estaMuerto;
     }
+
+    public void golpear(Monstruo monstruo){
+
+        if (this.getArmaDerecha() != null){
+            monstruo.reducirVida(this.getArmaDerecha().getPuntosD());
+            if (! this.getArmaDerecha().isDosManos()){
+                if (this.getArmaIzquierda() != null){
+
+                    monstruo.reducirVida(this.getArmaIzquierda().getPuntosD());
+                }
+            }
+        }
+
+
+
+        //Comprobar si has matado al monstruo
+
+        if (monstruo.getSalud() <= 0){
+            System.out.println("Has matado a " + monstruo.getNombre());
+            this.experiencia += monstruo.getNivel() * 10;
+
+            //Comprobar que no se pasa el experiencia maxima
+
+            if (this.experiencia > 1000){
+
+                this.experiencia = 1000;
+
+            }
+
+            //Calculamos el nivel *NOTA*: Para saber como hemos sacado el nivel actual dividimos la experiencia actual entre 100
+
+            int calculoNivel = this.experiencia / 100;
+
+            for(int i = 0; i< calculoNivel; i++){
+                subirNivel();
+                System.out.println("Has subido de un nivel");
+            }
+
+        }
+    }
+
 
 
 
