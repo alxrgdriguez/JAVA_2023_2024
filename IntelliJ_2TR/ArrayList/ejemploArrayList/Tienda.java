@@ -58,4 +58,11 @@ public class Tienda {
 
     }
 
+    //removeProducto
+    public void removeProducto(Producto producto){
+
+        this.productos.remove(producto);
+
+    }
+
 }
