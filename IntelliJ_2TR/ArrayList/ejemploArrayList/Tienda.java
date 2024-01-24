@@ -6,12 +6,12 @@ import java.util.Objects;
 public class Tienda {
 
     private String nombre;
-    private ArrayList<Producto> productos = new ArrayList<>();
+    private ArrayList<Producto> productos;
 
     //Constructor
-    public Tienda(String nombre, ArrayList<Producto> productos) {
+    public Tienda(String nombre) {
         this.nombre = nombre;
-        this.productos = productos;
+        this.productos = new ArrayList<>();
     }
 
     //Getters and Setters
@@ -51,7 +51,7 @@ public class Tienda {
         return Objects.equals(nombre, tienda.nombre);
     }
 
-    //addProducto
+    //addProducto. Añadir un producto a la tienda
     public void addProducto(Producto producto){
 
         this.productos.add(producto);
