@@ -110,9 +110,10 @@ public class Persona {
         return altura;
     }
 
-    public void setAltura(int altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
+
 
     //Métodos
 
