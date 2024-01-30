@@ -18,20 +18,17 @@ public class TestPersona {
         System.out.println("Ingrese su edad: ");
         persona1.setEdad(Integer.parseInt(sc.nextLine()));
 
-        System.out.println("Ingrese su sexo: ");
-        persona1.setSexo(Integer.parseInt(sc.nextLine()));
+        /*System.out.println("Ingrese su sexo: ");
+        persona1.setSexo(Integer.parseInt(sc.nextLine()));*/
 
         System.out.println("Ingrese su DNI: ");
         persona1.setDni(sc.nextLine());
 
         System.out.println("Ingrese su peso: ");
-        persona1.setPeso(sc.nextDouble());
+        persona1.setPeso(Double.parseDouble(sc.nextLine()));
 
         System.out.println("Ingrese su altura: ");
-        persona1.setAltura(sc.nextInt());
-
-        //Mostramos los datos ingresados
-        System.out.println("Datos ingresados: " + persona1.toString());
+        persona1.setAltura(Double.parseDouble(sc.nextLine()));
 
 
 
