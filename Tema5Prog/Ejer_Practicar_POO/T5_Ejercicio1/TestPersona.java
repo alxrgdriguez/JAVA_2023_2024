@@ -19,7 +19,7 @@ public class TestPersona {
         persona1.setEdad(Integer.parseInt(sc.nextLine()));
 
         /*System.out.println("Ingrese su sexo: ");
-        persona1.setSexo(Integer.parseInt(sc.nextLine()));*/
+        persona1.setSexo(sc.nextLine()));*/
 
         System.out.println("Ingrese su DNI: ");
         persona1.setDni(sc.nextLine());

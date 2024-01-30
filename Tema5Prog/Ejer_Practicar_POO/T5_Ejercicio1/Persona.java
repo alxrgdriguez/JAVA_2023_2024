@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Persona {
 
     //Propiedades
-    public enum Sexo{ H, M, O}
+    public enum Sexo{ H, M, O};
     private String nombre;
     private int edad;
     private Sexo sexo;
