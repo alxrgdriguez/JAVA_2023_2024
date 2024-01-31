@@ -4,8 +4,9 @@ import java.util.Objects;
 
 public class Persona {
 
+
     //Propiedades
-    public enum Sexo{ H, M, O};
+    public enum Sexo {H, M, O}
     private String nombre;
     private int edad;
     private Sexo sexo;
@@ -15,23 +16,11 @@ public class Persona {
 
     //Constructores
 
-    /**
-     * Un constructor por defecto
-     */
-    public Persona() {
-        this.nombre = "Miriam";
-        this.sexo = Sexo.M;
-        this.dni = "43881870E";
-        this.edad = 32;
-        this.peso = 80;
-        this.altura = 1.80;
-    }
-
 
     /**
      * Un constructor con el nombre, edad, dni, sexo, y el resto por defecto.
      */
-    public Persona(double peso, int altura) {
+    public Persona(String nuevoNombre, double peso, Sexo h, double v, int altura, int i) {
         this.peso = peso;
         this.altura = altura;
         this.nombre = "Juan";
@@ -146,6 +135,19 @@ public class Persona {
             return mayorEdad;
         }
 
+    }
+
+    /**
+     * Método para comprobar si el DNI es correcto
+     */
+    public boolean comprobarDNI() {
+
+        if (this.dni.length() == 9) {
+            return true;
+        }else {
+            return false;
+
+        }
     }
 
     //toString
