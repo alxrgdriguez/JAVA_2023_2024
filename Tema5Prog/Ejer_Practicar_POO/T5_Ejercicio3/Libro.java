@@ -1,5 +1,7 @@
 package Tema5Prog.Ejer_Practicar_POO.T5_Ejercicio3;
 
+import java.util.Objects;
+
 public class Libro {
 
     //Propiedades
@@ -78,5 +80,32 @@ public class Libro {
 
     public void setVendido(boolean vendido) {
         this.vendido = vendido;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Libro{");
+        sb.append("ISBN=").append(ISBN);
+        sb.append(", titulo='").append(titulo).append('\'');
+        sb.append(", autor='").append(autor).append('\'');
+        sb.append(", num_paginas='").append(num_paginas).append('\'');
+        sb.append(", precio_compra=").append(precio_compra);
+        sb.append(", precio_venta=").append(precio_venta);
+        sb.append(", vendido=").append(vendido);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Libro libro = (Libro) o;
+        return ISBN == libro.ISBN && Double.compare(precio_compra, libro.precio_compra) == 0 && Double.compare(precio_venta, libro.precio_venta) == 0 && vendido == libro.vendido && Objects.equals(titulo, libro.titulo) && Objects.equals(autor, libro.autor) && Objects.equals(num_paginas, libro.num_paginas);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ISBN, titulo, autor, num_paginas, precio_compra, precio_venta, vendido);
     }
 }
