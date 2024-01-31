@@ -16,17 +16,29 @@ public class Persona {
 
     //Constructores
 
+    /**
+     * Constructor por defecto
+     */
+    public Persona() {
+
+        this.nombre = "";
+        this.edad = 0;
+        this.sexo = Sexo.H;
+        this.dni = "";
+        this.peso = 0;
+        this.altura = 0;
+    }
 
     /**
      * Un constructor con el nombre, edad, dni, sexo, y el resto por defecto.
      */
-    public Persona(String nuevoNombre, double peso, Sexo h, double v, int altura, int i) {
-        this.peso = peso;
-        this.altura = altura;
-        this.nombre = "Juan";
-        this.sexo = Sexo.H;
-        this.dni = "23821876Y";
-        this.edad = 27;
+    public Persona(Sexo sexo, String dni, int edad, String nombre) {
+        this.sexo = sexo;
+        this.dni = dni;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.peso = 0;
+        this.altura = 0;
     }
 
     /**
@@ -126,28 +138,15 @@ public class Persona {
      */
     public boolean esMayorEdad() {
 
-        boolean mayorEdad = false;
-
-        if (this.edad >= 18) {
-            return mayorEdad = true;
-
-        }else {
-            return mayorEdad;
-        }
-
+        return (this.edad >= 18);
     }
 
     /**
-     * Método para comprobar si el DNI es correcto
+     * Método para comprobar el DNI de la Persona
      */
-    public boolean comprobarDNI() {
+    public boolean comprobarDNI(String dni) {
 
-        if (this.dni.length() == 9) {
-            return true;
-        }else {
-            return false;
-
-        }
+        return dni.length() == 9;
     }
 
     //toString
