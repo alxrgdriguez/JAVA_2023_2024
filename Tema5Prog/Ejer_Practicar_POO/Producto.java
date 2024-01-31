@@ -2,6 +2,7 @@ package Tema5Prog.Ejer_Practicar_POO;
 import java.util.Objects;
 public class Producto {
 
+    //Propiedades
     protected long id;
     protected String nombre;
     protected String descripcion;
@@ -9,6 +10,8 @@ public class Producto {
     protected int unidadesDisponibles;
     protected int stockMaximo;
     protected double descuento;
+
+    //Constructor
 
     public Producto(long id, String nombre, String descripcion, double precioUnitario,
                     int unidadesDisponibles, int stockMaximo, double descuento) {
@@ -20,6 +23,8 @@ public class Producto {
         this.stockMaximo = stockMaximo;
         this.descuento = descuento;
     }
+
+    //Getters y Setters
 
     public long getId() {
         return id;
@@ -77,6 +82,8 @@ public class Producto {
         this.descuento = descuento;
     }
 
+    //toString
+
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Producto{");
@@ -91,6 +98,8 @@ public class Producto {
         return sb.toString();
     }
 
+    //equals
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -99,13 +108,17 @@ public class Producto {
         return id == producto.id;
     }
 
+    //hashCode
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
 
+    //Metodos
+
     /**
-     * Vende una cantidad de producto, siempre que haya suficientes unidades disponibles
+     * Método para vender una cantidad de producto, siempre que haya suficientes unidades disponibles
      * @param cantidad
      * @return true, si se puede vender. false, si no se puede vender
      */
@@ -121,7 +134,7 @@ public class Producto {
     }
 
     /**
-     * Incrementa el número de unidades disponibles hasta el máximo del stock
+     * Método para incrementar el número de unidades disponibles hasta el máximo del stock
      * @return La diferencia entre el stock máximo y las unidades disponibles.
      */
     public int reponer() {
@@ -131,8 +144,4 @@ public class Producto {
         return diferencia;
     }
 
-    public double calcularPrecio(int cantidad) {
-        return (this.getPrecioUnitario() -
-                (this.getPrecioUnitario() * this.getDescuento())) * cantidad;
-    }
 }
