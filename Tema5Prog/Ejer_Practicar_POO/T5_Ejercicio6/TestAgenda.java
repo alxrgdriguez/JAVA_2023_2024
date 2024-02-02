@@ -7,6 +7,7 @@ public class TestAgenda {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        Agenda agenda = new Agenda();
         int opcion = 0;
 
         do {
@@ -31,11 +32,59 @@ public class TestAgenda {
             switch (opcion){
 
                 case 1:
+                    String nombre_contado = "";
+                    String num_telefono = "";
+                    int tipoContacto = 0;
+
+                    System.out.println("Introduce el nombre del contacto: ");
+                    nombre_contado = sc.nextLine();
+
+                    System.out.println("Introduce el número de telefono del contacto: ");
+                    num_telefono = sc.nextLine();
+
+                    System.out.println("Introduce el tipo de contacto que deseas crear: \n");
+                    System.out.println("1. Contacto tipo Persona");
+                    System.out.println("2. Contacto tipo Empresa");
+                    tipoContacto = Integer.parseInt(sc.nextLine());
+
+                    switch (tipoContacto){
+
+                        case 1:
+                            String apodo = "";
+                            System.out.println("Introduce el apodo del contacto: ");
+                            apodo = sc.nextLine();
+
+                            //Llamamos al metodo agregarContacto y agregamos un numero contactoPersona
+                            agenda.addContacto(new ContactoPersona(nombre_contado, num_telefono, apodo));
+                            System.out.println("Se ha creado el contacto: " + nombre_contado + " con numero de telefono " + num_telefono + " y con apdodo "
+                                    + apodo);
+                            break;
+
+
+                        case 2:
+                            String cif = "";
+                            String email = "";
+
+                            System.out.println("Introduce el cif del contacto: ");
+                            cif = sc.nextLine();
+                            System.out.println("Introduce el email del contacto: ");
+                            email = sc.nextLine();
+                            //LLamamos al metodo agregarContacto y agregamos un numero contactoEmpresa
+                            agenda.addContacto(new ContactoEmpresa(nombre_contado, num_telefono, cif, email));
+
+                            break;
+
+                    }
 
                     break;
 
 
                 case 2:
+
+                    System.out.println("----- CONTACTOS -----");
+                    System.out.println(agenda.listarContactos());
+
+
 
                     break;
 
@@ -56,18 +105,11 @@ public class TestAgenda {
 
                 default:
                     System.out.println("Opcion no valida!");
-
-
+                    break;
 
             }
 
-
-
-
         }while (opcion != 5);
-
-
-
 
 
     }

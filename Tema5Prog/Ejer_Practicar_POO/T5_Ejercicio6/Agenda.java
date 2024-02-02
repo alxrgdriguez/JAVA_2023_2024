@@ -58,6 +58,18 @@ public class Agenda {
         }
     }
 
+    public String listarContactos(){
+
+        StringBuffer sb = new StringBuffer();
+
+        for (Contacto c : contactos) {
+
+            sb.append(c.pintar()).append("\n");
+        }
+
+        return sb.toString();
+    }
+
     /*public boolean buscarContacto(Contacto c) {
 
 
