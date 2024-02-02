@@ -53,8 +53,8 @@ public class Contacto {
 
     public String pintar() {
         StringBuffer sb = new StringBuffer();
-        sb.append("Nombre: " + nombre + "\n");
-        sb.append("Telefono: " + telefono + "\n");
+        sb.append("Nombre: ").append(nombre).append("\n");
+        sb.append("Telefono: ").append(telefono).append("\n");
         return sb.toString();
     }
 }

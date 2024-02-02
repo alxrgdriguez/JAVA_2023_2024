@@ -32,7 +32,7 @@ public class ContactoPersona extends Contacto {
     @Override
     public String pintar() {
 
-        StringBuffer sb = new StringBuffer();
+        StringBuffer sb = new StringBuffer(super.pintar());
         sb.append("Apodo: " + apodo + "\n");
         return sb.toString();
     }
