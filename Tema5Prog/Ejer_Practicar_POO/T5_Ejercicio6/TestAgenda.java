@@ -57,7 +57,7 @@ public class TestAgenda {
 
                             //Llamamos al metodo agregarContacto y agregamos un numero contactoPersona
                             agenda.addContacto(new ContactoPersona(nombre_contado, num_telefono, apodo));
-                            System.out.println("Se ha creado el contacto: " + nombre_contado + " con numero de telefono " + num_telefono + " y con apdodo "
+                            System.out.println("Se ha creado el contacto: " + nombre_contado + " con numero de telefono " + num_telefono + " y con apodo "
                                     + apodo);
                             break;
 
