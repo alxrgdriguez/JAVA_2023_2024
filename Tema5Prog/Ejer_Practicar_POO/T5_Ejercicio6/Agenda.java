@@ -70,14 +70,13 @@ public class Agenda {
         return sb.toString();
     }
 
-    /*public boolean buscarContacto(Contacto c) {
-
-
-    }*/
-
-
-
-
-
+    public boolean buscarContacto(Contacto c) {
+        for (Contacto contacto : contactos) {
+            if (contacto.equals(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

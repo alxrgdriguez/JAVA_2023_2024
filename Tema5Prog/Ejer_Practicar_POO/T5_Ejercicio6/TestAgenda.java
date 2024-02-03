@@ -45,6 +45,7 @@ public class TestAgenda {
                     System.out.println("Introduce el tipo de contacto que deseas crear: \n");
                     System.out.println("1. Contacto tipo Persona");
                     System.out.println("2. Contacto tipo Empresa");
+                    System.out.print("Tipo de contacto: ");
                     tipoContacto = Integer.parseInt(sc.nextLine());
 
                     switch (tipoContacto){
@@ -84,11 +85,10 @@ public class TestAgenda {
                     System.out.println("----- CONTACTOS -----");
                     System.out.println(agenda.listarContactos());
 
-
-
                     break;
 
                 case 3:
+                    System.out.println("Introduce el nombre del contacto que deseas eliminar: ");
 
                     break;
 
@@ -100,11 +100,6 @@ public class TestAgenda {
 
                     System.out.println("Gracias por usar la Agenda, vuelva pronto");
 
-                    break;
-
-
-                default:
-                    System.out.println("Opcion no valida!");
                     break;
 
             }
