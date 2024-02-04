@@ -7,9 +7,9 @@ public class MonstruoFinalNivel extends Monstruo {
     private int usosGolpeEspecial;
 
     //Constructor
-    public MonstruoFinalNivel(String nombre, ClaseM clasem, int puntosD, int golpeEspecial) {
+    public MonstruoFinalNivel(String nombre, ClaseM clasem, int puntosD) {
         super(nombre, clasem, puntosD);
-        this.golpeEspecial = golpeEspecial;
+        this.golpeEspecial = puntosD;
         this.usosGolpeEspecial = 3;
     }
 

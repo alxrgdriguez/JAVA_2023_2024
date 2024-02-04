@@ -11,7 +11,7 @@ public class TestJuego {
         Monstruo m2 = new Monstruo("XINO", Monstruo.ClaseM.GOBLIN, 15);
         Monstruo m3 = new Monstruo("CHUMI", Monstruo.ClaseM.DEMONIO, 30);
         Monstruo m4 = new Monstruo("DURIM", Monstruo.ClaseM.SKRALL, 100);
-        MonstruoFinalNivel mfn1 = new MonstruoFinalNivel("Pepinator", Monstruo.ClaseM.FANTASMA, 100, 150);
+        MonstruoFinalNivel mfn1 = new MonstruoFinalNivel("Pepinator", Monstruo.ClaseM.FANTASMA,  150);
 
         //Creamos nuestro Jugador
         Jugador j1 = new Jugador("Nazgul");
