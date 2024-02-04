@@ -2,6 +2,8 @@ package Tema5Prog.Practica_Objetos2.juego_bladeofdarkness_2;
 
 public class TestJuego {
 
+    String clase = this.getClass().getName();
+
     public static void main(String[] args) {
 
         //Creamos nuestros Monstruos
@@ -16,6 +18,14 @@ public class TestJuego {
         //Equipamos las armas al jugador
         j1.equipar(new Arma("SWORD OF LIGHT", Arma.Tipo.ESPADA,32,false));
         j1.equipar(new Arma("STELAR BOW", Arma.Tipo.ARCO,18,false));
+
+        System.out.println(m2.getSalud());
+        m2.subirNivel();
+        System.out.println(m2.getSalud());
+
+        System.out.println(j1.getSalud());
+        j1.subirNivel();
+        System.out.println(j1.getSalud());
 
         //Atacar al monstruo
 

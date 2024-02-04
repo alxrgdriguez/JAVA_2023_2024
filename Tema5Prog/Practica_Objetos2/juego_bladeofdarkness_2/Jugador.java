@@ -1,62 +1,40 @@
 package Tema5Prog.Practica_Objetos2.juego_bladeofdarkness_2;
 
-public class Jugador {
+public class Jugador extends Personaje {
 
     //Propiedades
 
-    private String nombre;
 
     public enum Clase {MAGO, BRUJO, BARBARO, CABALLERO}
 
-    private int nivel;
     private int experiencia;
-    private double salud ;
     private Arma armaDerecha;
     private Arma armaIzquierda;
 
     //Constructor
 
-    public Jugador(String nombre) {
-        this.nombre = nombre;
-        this.nivel = 1;
+    public Jugador(String nombre, int nivel, double salud, String nombre1) {
+        super(nombre, nivel, salud);
+    }
+
+
+
+
+   public Jugador(String nombre) {
+        super(nombre,200.0);
         this.experiencia = 0;
-        this.salud = 200;
         this.armaDerecha = null;
         this.armaIzquierda = null;
-    }
+
+   }
 
     //Getters and Setters
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
-    }
-
-    public int getExperiencia() {
+        public int getExperiencia() {
         return experiencia;
     }
 
     public void setExperiencia(int experiencia) {
         this.experiencia = experiencia;
-    }
-
-    public double getSalud() {
-        return salud;
-    }
-
-    public void setSalud(int salud) {
-        this.salud = salud;
     }
 
     public Arma getArmaDerecha() {
@@ -86,24 +64,7 @@ public class Jugador {
 
     //Metodos
 
-    /**
-     * Método para subir el nivel
-     */
-    public void subirNivel() {
-        // Incrementamos el nivel en 1
-        this.nivel++;
 
-        // Calculamos la nueva salud elevando al nivel
-        double nuevaSalud = 2.5 * Math.pow(this.nivel, 2);
-
-        // Actualizamos la salud
-        this.salud += nuevaSalud;
-
-        // Comprueba si el nivel es máximo a 10
-        if (this.nivel > 10) {
-            this.nivel = 10;
-        }
-    }
 
     /**
      * Método para equipar un arma, ya sea en la mano derecha o en la mano izquierda
@@ -168,44 +129,24 @@ public class Jugador {
 
     }
 
-    public boolean reducirVida(int puntosD){
 
-        boolean estaMuerto = false;
-        double vidaTotal = this.salud - puntosD;
 
-        if (vidaTotal <= 0){
-
-            this.salud = 0.0;
-            estaMuerto = true;
-            System.out.println(this.getNombre() + " ha muerto!!!");
-
-        }else {
-
-            this.salud = vidaTotal;
-        }
-
-        return estaMuerto;
-    }
-
-    public void golpear(Monstruo monstruo){
+    public void golpear (Personaje personaje){
 
         if (this.getArmaDerecha() != null){
-            monstruo.reducirVida(this.getArmaDerecha().getPuntosD());
+            personaje.reducirVida(this.getArmaDerecha().getPuntosD());
             if (! this.getArmaDerecha().isDosManos()){
                 if (this.getArmaIzquierda() != null){
 
-                    monstruo.reducirVida(this.getArmaIzquierda().getPuntosD());
+                    personaje.reducirVida(this.getArmaIzquierda().getPuntosD());
                 }
             }
         }
-
-
-
         //Comprobar si has matado al monstruo
 
-        if (monstruo.getSalud() <= 0){
-            System.out.println("Has matado a " + monstruo.getNombre());
-            this.experiencia += monstruo.getNivel() * 10;
+        if (personaje.getSalud() <= 0){
+            System.out.println("Has matado a " + personaje.getNombre());
+            this.experiencia += personaje.getNivel() * 10;
 
             //Comprobar que no se pasa el experiencia maxima
 
