@@ -132,7 +132,6 @@ public class Jugador extends Personaje {
 
 
     public void golpear (Personaje personaje){
-
         if (this.getArmaDerecha() != null){
             personaje.reducirVida(this.getArmaDerecha().getPuntosD());
             if (! this.getArmaDerecha().isDosManos()){

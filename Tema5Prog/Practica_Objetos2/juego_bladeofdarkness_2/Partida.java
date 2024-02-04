@@ -2,6 +2,8 @@ package Tema5Prog.Practica_Objetos2.juego_bladeofdarkness_2;
 
 import java.util.ArrayList;
 
+import static java.lang.System.exit;
+
 public class Partida {
 
     private Jugador jugador;
@@ -67,13 +69,29 @@ public class Partida {
                 monstruos.remove(num);
             }else{
                 this.jugador.golpear(this.monstruos.get(num));
+                System.out.println(this.jugador.getNombre() + " ha golpeado a " + this.monstruos.get(num).getNombre() + " y le ha echo " + this.jugador.getArmaDerecha().getPuntosD() + " daño");
+
                 luchado=true;
             }
 
 
         }while (!luchado);
 
+    }
 
+    /**
+     * Metodo para turno del monstruo
+     */
+
+    public void turnoEnemigos() {
+
+        this.monstruos.get(0).golpear(this.jugador);
+        System.out.println(this.monstruos.get(0).getNombre() + " ha golpeado a " + this.jugador.getNombre() + " y le ha echo " + this.monstruos.get(0).getPuntosD() + " daño");
+        if (this.jugador.getSalud() <= 0){
+
+            System.out.println("Has perdido la lucha");
+            exit(0);
+        }
 
     }
 
