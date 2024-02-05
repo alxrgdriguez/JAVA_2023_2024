@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Contacto {
 
     //Propiedades
-    private String nombre;
+    protected String nombre;
 
-    private String telefono;
+    protected String telefono;
 
 
     //Constructor
@@ -39,7 +39,7 @@ public class Contacto {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null) return false; //Cuando haya herencia quitamos || getClass() != o.getClass() que esta en esta línea
         Contacto contacto = (Contacto) o;
         return Objects.equals(nombre, contacto.nombre);
     }

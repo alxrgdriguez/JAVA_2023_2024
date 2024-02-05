@@ -48,7 +48,7 @@ public class Agenda {
      * @return
      */
     public boolean existeContacto(Contacto c) {
-        if (contactos.indexOf(c) < 0) {
+        if (!contactos.contains(c)) {
             System.out.println("El contacto no existe");
             return false;
 
@@ -70,13 +70,18 @@ public class Agenda {
         return sb.toString();
     }
 
-    public boolean buscarContacto(Contacto c) {
-        for (Contacto contacto : contactos) {
-            if (contacto.equals(c)) {
-                return true;
-            }
+    public Contacto buscarContacto(Contacto c) {
+
+        int posicion = contactos.indexOf(c);
+
+        if (posicion < 0){
+            return null;
+
+        }else{
+            return contactos.get(posicion);
         }
-        return false;
+
+
     }
 
 }

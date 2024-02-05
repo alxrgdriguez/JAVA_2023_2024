@@ -17,7 +17,7 @@ public class TestAgenda {
                 System.out.println("1. Añadir un contacto");
                 System.out.println("2. Listar todos los contactos");
                 System.out.println("3. Eliminar un contacto");
-                System.out.println("4. Estado de la agenda");
+                System.out.println("4. Buscar un contacto");
                 System.out.println("5. Salir");
                 System.out.println(" --------------------- ");
                 System.out.print("Elige una opcion: ");
@@ -88,11 +88,15 @@ public class TestAgenda {
                     break;
 
                 case 3:
-                    System.out.println("Introduce el nombre del contacto que deseas eliminar: ");
+                    System.out.print("Introduce el nombre del contacto que deseas eliminar: ");
+                    String nombre_eliminar = sc.nextLine();
 
+                    Contacto contacto_eliminar = new Contacto(nombre_eliminar, null);
+                    agenda.eliminarContacto(contacto_eliminar);
                     break;
 
                 case 4:
+                    System.out.println("Introduce el nombre contacto a buscar: ");
 
                     break;
 
