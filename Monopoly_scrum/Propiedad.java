@@ -19,6 +19,10 @@ public class Propiedad extends Casilla {
         this.alquiler = alquiler;
     }
 
+    public Propiedad(String propiedad, int numero, String nombre, int coste) {
+        super(nombre, numero);
+    }
+
     //Getters y Setters de Propiedad
 
     public int getCoste() {

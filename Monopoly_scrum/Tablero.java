@@ -25,7 +25,14 @@ public class Tablero {
      * 5. Casillas de carta
      */
 
+    public Tablero(ArrayList<Casilla> casillas) {
+        for (int i = 1; i < casillas.size() -1; i++) {
 
+            new Carcel("Carcel", 20, 1);
+            new Propiedad("Propiedad", 28, "Propiedad ", 2500);
+
+        }
+    }
 
 
 

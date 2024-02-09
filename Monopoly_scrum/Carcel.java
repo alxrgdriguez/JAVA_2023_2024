@@ -6,7 +6,7 @@ public class Carcel extends CasillaEspecial {
     //private String;
 
     //Constructor de Carcel --> Padre CasillaEspecial
-    public Carcel(String nombre, int numero, int cantidad, String accion) {
+    public Carcel(String nombre, int numero, int cantidad) {
         super(nombre, numero, cantidad);
 
     }
