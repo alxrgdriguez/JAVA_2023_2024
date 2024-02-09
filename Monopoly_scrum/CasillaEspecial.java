@@ -2,11 +2,11 @@ package Monopoly_scrum;
 
 import java.util.Objects;
 
-public class CasillaEspecial extends Casilla {
+public abstract class CasillaEspecial extends Casilla {
 
     //Propiedades de CasillaEspecial
 
-    private int cantidad;
+    protected int cantidad;
 
     //Constructor de CasillaEspecial
 

@@ -2,7 +2,7 @@ package Monopoly_scrum;
 
 import java.util.Objects;
 
-public class Casilla {
+public abstract class Casilla {
 
     //Propiedades de Casilla
 
