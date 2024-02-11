@@ -1,5 +1,6 @@
 package Tema5Prog.Practica_Objetos2.equipo_ciclistas;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Equipo {
@@ -7,10 +8,9 @@ public class Equipo {
     //Propiedades
 
     private String nombre;
-
     public static double tiemposCarrera;
-
     private String pais;
+    private ArrayList<Ciclista> ciclistas;
 
     //Constructor
 
@@ -18,6 +18,7 @@ public class Equipo {
         this.nombre = nombre;
         this.pais = pais;
         tiemposCarrera = 0;
+        this.ciclistas = new ArrayList<>();
     }
 
     //Getters and Setters
@@ -46,6 +47,15 @@ public class Equipo {
         this.pais = pais;
     }
 
+    public ArrayList<Ciclista> getCiclistas() {
+        return ciclistas;
+    }
+
+    public void setCiclistas(ArrayList<Ciclista> ciclistas) {
+        this.ciclistas = ciclistas;
+    }
+
+
     //toString
 
     @Override
@@ -65,6 +75,41 @@ public class Equipo {
         if (o == null || getClass() != o.getClass()) return false;
         Equipo equipo = (Equipo) o;
         return Objects.equals(nombre, equipo.nombre);
+    }
+
+    /**
+     * Metodo para calcular el tiempo de carrera del equipo
+     */
+
+    public double calcularTiempoCarrera() {
+        for (int i = 0; i < ciclistas.size(); i++) {
+            tiemposCarrera += ciclistas.get(i).getTiempoAcumulado();
+        }
+        return tiemposCarrera;
+    }
+
+    /**
+     * Metodo para añadir un ciclista al equipo
+     */
+
+    public void addCiclista(Ciclista ciclista) {
+
+        //Utilizamos el array
+        this.ciclistas.add(ciclista);
+    }
+
+    /**
+     * Método para buscar un ciclista en el equipo mediante el identificador
+     */
+
+    public String buscarCiclista(int identificador) {
+
+        for (int i = 0; i < this.ciclistas.size(); i++) {
+            if (this.ciclistas.get(i).getIdentificador() == identificador) {
+                return this.ciclistas.get(i).toString();
+            }
+        }
+        return null;
     }
 
 
