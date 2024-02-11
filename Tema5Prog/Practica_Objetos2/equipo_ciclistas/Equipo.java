@@ -67,8 +67,5 @@ public class Equipo {
         return Objects.equals(nombre, equipo.nombre);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(nombre);
-    }
+
 }
