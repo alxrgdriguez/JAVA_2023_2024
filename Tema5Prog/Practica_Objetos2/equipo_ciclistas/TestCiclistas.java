@@ -23,6 +23,7 @@ public class TestCiclistas {
                 opcion= Integer.parseInt(sc.nextLine());
             }catch (NumberFormatException e) {
                 System.out.println("Ha ocurrido un error, vuelva a inciar el juego!");
+                System.exit(1);
                 opcion=0;
                 break;
             }
@@ -50,10 +51,19 @@ public class TestCiclistas {
 
                 case 5:
 
+                    String identificador = "";
+                    System.out.println("Introduce el identificador del ciclista: ");
+                    identificador = sc.nextLine();
+
+
+
+
                     break;
 
 
                 case 6:
+
+                    System.out.println("Gracias por usar el programa de ciclistas!");
 
                     break;
 
