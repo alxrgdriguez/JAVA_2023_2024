@@ -56,8 +56,6 @@ public class TestCiclistas {
                     identificador = sc.nextLine();
 
 
-
-
                     break;
 
 
