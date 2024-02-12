@@ -4,9 +4,9 @@ public class Producto implements Transportable {
 
     //Propiedades
 
-    private String nombre;
+    protected String nombre;
 
-    private double peso;
+    protected double peso;
 
     //Constructor
     public Producto(String nombre, double precio) {
