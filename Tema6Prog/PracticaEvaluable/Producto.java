@@ -53,9 +53,7 @@ public class Producto implements Transportable {
 
         double costoBase = 20;
 
-        double totalCoste = this.peso * 0.2 + costoBase;
-
-        return totalCoste;
+        return this.peso * 0.2 + costoBase;
 
     }
 }

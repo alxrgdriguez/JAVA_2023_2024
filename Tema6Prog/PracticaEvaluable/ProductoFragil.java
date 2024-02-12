@@ -26,30 +26,21 @@ public class ProductoFragil extends Producto{
         this.nivelFragil = nivelFragil;
     }
 
-    //toString
-
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("ProductoFragil{");
-        sb.append("nivelFragil=").append(nivelFragil);
-        sb.append('}');
-        return sb.toString();
-    }
 
     //Metodos
 
+    @Override
     public double calcularCosteEnvio(boolean esInternacional) {
 
-
         if (this.nivelFragil == NivelProducto.fragil) {
-
-            return totalCoste(esInternacional) + 20;
-
-        }if (this.nivelFragil == NivelProducto.muyfragil) {
-
-            return totalCoste(esInternacional) + 50;
-
+            return super.calcularCosteEnvio(esInternacional) + 20;
         }
+
+        if (this.nivelFragil == NivelProducto.muyfragil) {
+            return super.calcularCosteEnvio(esInternacional) + 50;
+        }
+
+        return calcularCosteEnvio(true);
 
     }
 }

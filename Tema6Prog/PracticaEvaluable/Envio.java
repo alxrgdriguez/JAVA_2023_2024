@@ -1,6 +1,9 @@
 package Tema6Prog.PracticaEvaluable;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.Period;
 import java.util.ArrayList;
+
 public class Envio {
 
     //Propiedades
@@ -61,6 +64,51 @@ public class Envio {
     }
 
     //Metodos
+
+    /**
+     * Método para agregar un transportable a la lista de transportables
+     */
+
+    public void agregarTransportable(Transportable item) {
+
+        //Agregamos el transportable a la lista de transportables
+        this.transportables.add(item);
+        System.out.println("El transportable se agregó correctamente");
+    }
+
+    /**
+     * Método para calcular el coste total del envio
+     */
+
+    /*public double calcularCostoTotalEnvio() {
+
+
+    }*/
+
+    /**
+     * Metodo para listar Producutos
+     */
+
+    public void listarProductos() {
+
+        for (int i = 0; i < this.transportables.size(); i++) {
+            System.out.println(this.transportables.get(i).toString());
+        }
+    }
+
+    /**
+     * Metodo para ver los dias transcurridos desde la fecha de salida a la de llegada
+     */
+
+    public void diasTranscurridos() {
+
+        LocalDate fechaSalida = LocalDate.parse(this.fechaSalida);
+        LocalDate fechaLlegada = LocalDate.parse(this.fechaLlegada);
+        Period periodo = Period.between(fechaSalida, fechaLlegada);
+        System.out.println(periodo.getDays());
+
+    }
+
 
 
 }

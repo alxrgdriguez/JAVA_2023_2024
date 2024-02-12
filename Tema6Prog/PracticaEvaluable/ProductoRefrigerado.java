@@ -39,15 +39,20 @@ public class ProductoRefrigerado extends Producto {
 
     //Metodos
 
-    /*public double calcularCosteEnvio(boolean esInternacional) {
+    public double calcularCosteEnvio(boolean esInternacional) {
 
         if (this.nivelRefigecion == NivelRefigerado.isotermica) {
 
-            return calcularCosteEnvio(true) + 30;
+            return super.calcularCosteEnvio(esInternacional) + 10;
+        }
 
+        if (this.nivelRefigecion == NivelRefigerado.frigorifica){
+            return super.calcularCosteEnvio(esInternacional) + 20;
         }
-        if (this.nivelRefigecion == NivelRefigerado.frigorifica) {
-            return calcularCosteEnvio(true) + 10;
-        }
-    }*/
+
+        return calcularCosteEnvio(true);
+    }
+
+
+
 }
