@@ -63,6 +63,21 @@ public class Envio {
         this.esInternacional = esInternacional;
     }
 
+    //toString
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Envio{");
+        sb.append("transportables=").append(transportables);
+        sb.append(", fechaSalida='").append(fechaSalida).append('\'');
+        sb.append(", fechaLlegada='").append(fechaLlegada).append('\'');
+        sb.append(", esInternacional=").append(esInternacional);
+        sb.append(", lt1=").append(lt1);
+        sb.append('}');
+        return sb.toString();
+    }
+
+
     //Metodos
 
     /**

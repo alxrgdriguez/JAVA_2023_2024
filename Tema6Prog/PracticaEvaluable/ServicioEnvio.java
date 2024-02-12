@@ -33,6 +33,17 @@ public class ServicioEnvio {
     }
 
     /**
-     * Método para generar informe de envios
+     * Método para generar informe de envios y su costo total
      */
+
+    /*public void generarInformeEnvios() {
+
+        //Calculamos el costo total de los envios y hacemos el informe
+        double costoTotalEnvio = 0;
+        for (int i = 0; i < this.envios.size(); i++) {
+            costoTotalEnvio += this.envios.get(i).calcularCosteEnvio(this.envios.get(i).isEsInternacional());
+        }
+        System.out.println(costoTotalEnvio);
+
+    }*/
 }
