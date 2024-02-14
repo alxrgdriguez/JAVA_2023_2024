@@ -1,6 +1,8 @@
-package Tema5Prog.Practica_Objetos3;
+package Tema5Prog.McBurger;
 
-import dominio.*;
+import Tema5Prog.McBurger.dominio.Menu;
+import Tema5Prog.McBurger.interfaces.Cocinable;
+import Tema5Prog.McBurger.dominio.*;
 
 public class Principal {
 
