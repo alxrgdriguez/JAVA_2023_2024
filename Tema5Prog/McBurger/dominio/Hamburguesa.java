@@ -19,7 +19,7 @@ public class Hamburguesa extends Comida {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Hamburguesa.................");
-        sb.append(obtenerPrecio());
+        sb.append(obtenerPrecio()).append("€");
         return sb.toString();
     }
 

@@ -10,7 +10,7 @@ public class Patata extends Comida{
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Patatas.fritas.................");
-        sb.append(obtenerPrecio());
+        sb.append(obtenerPrecio()).append("€");
         return sb.toString();
     }
 

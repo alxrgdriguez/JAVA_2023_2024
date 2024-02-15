@@ -10,7 +10,7 @@ public class Cola extends Bebida{
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Cola.................");
-        sb.append(obtenerPrecio());
+        sb.append(obtenerPrecio()).append("€");
         return sb.toString();
     }
 
