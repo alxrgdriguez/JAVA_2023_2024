@@ -12,9 +12,9 @@ public class Principal {
 		// Crear ingredientes
 		// ***************************************************************
 
-		Hamburguesa h1 = new Hamburguesa("26/04/2022");
-		Hamburguesa h2 = new Hamburguesa("27/04/2022");
-		Hamburguesa h3 = new Hamburguesa("07/05/2022");
+		Hamburguesa h1 = new Hamburguesa("2022-04-21");
+		Hamburguesa h2 = new Hamburguesa("2022-04-27");
+		Hamburguesa h3 = new Hamburguesa("2022-07-5");
 
 		Patata p1 = new Patata();
 		Patata p2 = new Patata();

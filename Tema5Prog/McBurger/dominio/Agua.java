@@ -2,10 +2,8 @@ package Tema5Prog.McBurger.dominio;
 
 public class Agua extends Bebida{
 
-    public Agua(String nombre, tipoIngredientes tipoIngrediente) {
-        super(nombre, tipoIngrediente);
-        this.nombre = nombre;
-        this.tipoIngrediente = tipoIngrediente;
+    public Agua() {
+        super("Agua", tipoIngredientes.bebida);
     }
 
     @Override

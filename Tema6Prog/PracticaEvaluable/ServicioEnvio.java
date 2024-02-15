@@ -9,7 +9,7 @@ public class ServicioEnvio {
 
     //Constructor
 
-    public ServicioEnvio(ArrayList<Envio> envios) {
+    public ServicioEnvio() {
         this.envios = envios;
     }
 
@@ -32,11 +32,13 @@ public class ServicioEnvio {
         System.out.println("El envio se agregó correctamente");
     }
 
+
+
     /**
      * Método para generar informe de envios y su costo total
      */
 
-    /*public void generarInformeEnvios() {
+    public void generarInformeEnvios() {
 
         //Calculamos el costo total de los envios y hacemos el informe
         double costoTotalEnvio = 0;
@@ -45,5 +47,5 @@ public class ServicioEnvio {
         }
         System.out.println(costoTotalEnvio);
 
-    }*/
+    }
 }

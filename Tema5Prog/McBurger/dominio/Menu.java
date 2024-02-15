@@ -66,5 +66,10 @@ public class Menu{
      */
 
     public double obtenerPrecioMenu() {
+        double precioTotal = 0.0;
+        for (int i = 0; i < this.listaIngredientes.size(); i++) {
+            precioTotal += this.listaIngredientes.get(i).obtenerPrecio();
+        }
+        return precioTotal;
     }
 }

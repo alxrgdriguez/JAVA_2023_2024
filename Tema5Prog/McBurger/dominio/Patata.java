@@ -2,10 +2,9 @@ package Tema5Prog.McBurger.dominio;
 
 public class Patata extends Comida{
 
-    public Patata(String nombre, tipoIngredientes tipoIngrediente) {
-        super(nombre, tipoIngrediente);
-        this.nombre = nombre;
-        this.tipoIngrediente = tipoIngrediente;
+    public Patata() {
+        super("Patata", tipoIngredientes.comida);
+
     }
 
 

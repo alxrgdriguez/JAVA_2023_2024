@@ -8,11 +8,12 @@ public class Hamburguesa extends Comida {
 
     private LocalDate fechaCaducidad;
 
+
     //Constructor
 
-    public Hamburguesa(String nombre, tipoIngredientes tipoIngrediente) {
-        super(nombre, tipoIngrediente);
-        this.fechaCaducidad = LocalDate.now();
+    public Hamburguesa(String fechaCaducidad) {
+        super("Hamburguesa", tipoIngredientes.comida);
+        this.fechaCaducidad = LocalDate.parse(fechaCaducidad);
     }
 
 

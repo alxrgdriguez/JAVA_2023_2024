@@ -2,10 +2,9 @@ package Tema5Prog.McBurger.dominio;
 
 public class Cola extends Bebida{
 
-    public Cola(String nombre, tipoIngredientes tipoIngrediente) {
-        super(nombre, tipoIngrediente);
-        this.nombre = nombre;
-        this.tipoIngrediente = tipoIngrediente;
+    public Cola() {
+        super("Cola", tipoIngredientes.bebida);
+
     }
 
     @Override
