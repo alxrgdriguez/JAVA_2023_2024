@@ -12,4 +12,6 @@ public abstract class Comida extends Ingrediente {
         super(nombre, tipoIngrediente);
         this.Cocinado = false;
     }
+
+
 }

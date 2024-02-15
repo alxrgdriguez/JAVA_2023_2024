@@ -7,6 +7,12 @@ public class Patata extends Comida{
 
     }
 
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Patatas.fritas.................");
+        sb.append(obtenerPrecio());
+        return sb.toString();
+    }
 
     @Override
     public double obtenerPrecio() {

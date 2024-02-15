@@ -16,6 +16,12 @@ public class Hamburguesa extends Comida {
         this.fechaCaducidad = LocalDate.parse(fechaCaducidad);
     }
 
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Hamburguesa.................");
+        sb.append(obtenerPrecio());
+        return sb.toString();
+    }
 
     //Metodos
 

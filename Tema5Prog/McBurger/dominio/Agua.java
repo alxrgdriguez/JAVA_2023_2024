@@ -7,6 +7,13 @@ public class Agua extends Bebida{
     }
 
     @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Agua.................");
+        sb.append(obtenerPrecio());
+        return sb.toString();
+    }
+
+    @Override
     public double obtenerPrecio() {
         return 0;
     }

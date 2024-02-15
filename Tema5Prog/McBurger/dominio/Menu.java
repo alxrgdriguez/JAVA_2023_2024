@@ -37,6 +37,9 @@ public class Menu{
     }
 
 
+    /**
+     * Metodo para imprimrir el menu completo
+     */
     public void imprimirMenu() {
         for (int i= 0; i < this.listaIngredientes.size(); i++) {
             System.out.println(this.listaIngredientes.get(i) );}
@@ -61,15 +64,23 @@ public class Menu{
     }
 
     /**
-     * Metodo para obtener el precio total de todos los articulos del Menu
+     * Metodo para obtener el precio total. Precio de Comida + precio de Bebida
      * @return Devuelve el precio total
      */
 
     public double obtenerPrecioMenu() {
-        double precioTotal = 0.0;
+
+        double precioComida = 0;
+        double precioBebida = 0;
+
         for (int i = 0; i < this.listaIngredientes.size(); i++) {
-            precioTotal += this.listaIngredientes.get(i).obtenerPrecio();
+            if (this.listaIngredientes.get(i) instanceof Bebida) {
+                precioBebida += this.listaIngredientes.get(i).obtenerPrecio();
+            } else if (this.listaIngredientes.get(i) instanceof Comida) {
+                precioComida += this.listaIngredientes.get(i).obtenerPrecio();
+            }
         }
-        return precioTotal;
+        return precioComida + precioBebida;
     }
+
 }
