@@ -1,4 +1,4 @@
-package Tema5Prog.McBurger;
+package Tema5Prog.McBurger.testMenu;
 
 import Tema5Prog.McBurger.dominio.Menu;
 import Tema5Prog.McBurger.interfaces.Cocinable;
