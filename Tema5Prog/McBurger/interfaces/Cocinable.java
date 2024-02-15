@@ -16,7 +16,6 @@ public interface Cocinable {
     public int asar();
 
 
-
     }
 
-}
+

@@ -4,7 +4,7 @@ public abstract class Bebida extends Ingrediente {
 
     //Propiedades
 
-    private boolean refrigerada;
+    protected boolean refrigerada;
 
     //Constructor
 
@@ -13,4 +13,13 @@ public abstract class Bebida extends Ingrediente {
         this.refrigerada = false;
     }
 
+    //Getters and Setters
+
+    public boolean isRefrigerada() {
+        return refrigerada;
+    }
+
+    public void setRefrigerada(boolean refrigerada) {
+        this.refrigerada = refrigerada;
+    }
 }

@@ -52,4 +52,19 @@ public class Menu{
     }
 
 
+    /**
+     * Método para añadir comida
+     */
+    public void addComida(Comida comida) {
+        this.listaIngredientes.add(comida);
+        this.numeroIngredientes++;
+    }
+
+    /**
+     * Metodo para obtener el precio total de todos los articulos del Menu
+     * @return Devuelve el precio total
+     */
+
+    public double obtenerPrecioMenu() {
+    }
 }
