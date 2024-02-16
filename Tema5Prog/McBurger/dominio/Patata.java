@@ -34,23 +34,26 @@ public class Patata extends Comida{
 
     public void freir() {
         this.estado = Cocinable.FRITA;
+        this.nombre = "Patata.Frita";
 
 
     }
 
     public void asar() {
         this.estado = Cocinable.ASADA;
+        this.nombre = "Patata.Asada";
 
     }
 
     public void cocer() {
         this.estado = Cocinable.COCIDA;
+        this.nombre = "Patata.Cocida";
 
     }
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Patata.");
+        final StringBuffer sb = new StringBuffer(nombre + "................. ");
         sb.append(obtenerPrecio()).append("€");
         return sb.toString();
     }
