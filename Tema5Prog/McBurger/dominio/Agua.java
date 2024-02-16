@@ -8,7 +8,7 @@ public class Agua extends Bebida{
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Agua.................");
+        final StringBuffer sb = new StringBuffer("Agua................. ");
         sb.append(obtenerPrecio()).append("€");
         return sb.toString();
     }
