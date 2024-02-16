@@ -71,16 +71,21 @@ public class Menu{
     public double obtenerPrecioMenu() {
 
         double precioComida = 0;
-        double precioBebida = 0;
+        double precioBebida= 0;
 
-        for (int i = 0; i < this.listaIngredientes.size(); i++) {
-            if (this.listaIngredientes.get(i) instanceof Bebida) {
-                precioBebida += this.listaIngredientes.get(i).obtenerPrecio();
-            } else if (this.listaIngredientes.get(i) instanceof Comida) {
-                precioComida += this.listaIngredientes.get(i).obtenerPrecio();
+        //Sumar el precio de Comida + el precio de Bebida para obtener el precio del menu
+        for (Ingrediente listaIngrediente : this.listaIngredientes) {
+
+            if (listaIngrediente instanceof Bebida) {
+                precioBebida += listaIngrediente.obtenerPrecio();
+            } else if (listaIngrediente instanceof Comida) {
+                precioComida += listaIngrediente.obtenerPrecio();
             }
         }
+
         return precioComida + precioBebida;
     }
+
+
 
 }

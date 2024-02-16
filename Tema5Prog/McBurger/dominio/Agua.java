@@ -13,9 +13,15 @@ public class Agua extends Bebida{
         return sb.toString();
     }
 
+    /**
+     * Obtener precio de Bebida agua
+     * @return Devuelve el precio de el agua
+     */
     @Override
     public double obtenerPrecio() {
-        return 0;
+
+    return 0;
+
     }
 
     public void meterEnNevera() {

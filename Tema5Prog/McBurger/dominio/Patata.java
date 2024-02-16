@@ -16,7 +16,8 @@ public class Patata extends Comida{
 
     @Override
     public double obtenerPrecio() {
-        return 0;
+
+       return 0;
     }
 
     public void freir() {

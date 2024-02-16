@@ -13,7 +13,7 @@ public abstract class Bebida extends Ingrediente {
         this.refrigerada = false;
     }
 
-    //Getters and Setters
+    //Getters y Setters
 
     public boolean isRefrigerada() {
         return refrigerada;
@@ -23,5 +23,18 @@ public abstract class Bebida extends Ingrediente {
         this.refrigerada = refrigerada;
     }
 
+    /**
+     * Método que asigna un precio a cada tipo de bebida.
+     * Bebida NO refrigerada --> 1€
+     * Bebida refrigerada --> 1.50€
+     * @return Devolverá su respectivo precio en precio en cada caso
+     */@Override
+    public double obtenerPrecio() {
 
+        if (this.refrigerada) {
+            return 1.50;
+        } else {
+            return 1;
+        }
+    }
 }
