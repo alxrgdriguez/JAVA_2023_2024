@@ -20,7 +20,11 @@ public class Agua extends Bebida{
     @Override
     public double obtenerPrecio() {
 
-    return 0;
+        double precioAgua = 0;
+
+        precioAgua = super.obtenerPrecio();
+
+        return precioAgua;
 
     }
 

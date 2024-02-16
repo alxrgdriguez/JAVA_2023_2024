@@ -9,14 +9,21 @@ public class Cola extends Bebida{
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Cola.................");
+        final StringBuffer sb = new StringBuffer("Cola................. ");
         sb.append(obtenerPrecio()).append("€");
         return sb.toString();
     }
 
+    /**
+     * Obtener precio de Bebida Cola
+     * @return Devuelve el precio de Cola
+     */
     @Override
     public double obtenerPrecio() {
-        return 0;
+        double precioCola = 0;
+
+        precioCola = super.obtenerPrecio();
+        return precioCola;
     }
 
 
