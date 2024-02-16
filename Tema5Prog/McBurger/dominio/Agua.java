@@ -29,8 +29,10 @@ public class Agua extends Bebida{
     }
 
     public void meterEnNevera() {
+        this.refrigerada = true;
     }
 
     public void sacarDeNevera() {
+        this.refrigerada = false;
     }
 }
