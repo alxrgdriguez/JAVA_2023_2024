@@ -6,16 +6,17 @@ public class T1_Ejercicio1 {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-       // Ejercicio 1. Escribir un programa que pregunte al usuario su nombre, y luego lo salude. 
+       // Ejercicio 1. Escribir un programa que pregunte al usuario su name, y luego lo salude. 
 
-        String nombre;
+        String name;
 
-        System.out.println("Escriba su nombre: ");
-        nombre = sc.nextLine();
+        System.out.println("Escriba su name: ");
+        name = sc.nextLine();
 
-        System.out.println("Hola " + nombre + " bienvenido a la programación Java");
+        System.out.println("Hola " + name + " bienvenido a la programación Java");
 
         sc.close();
+
 
     }
 
