@@ -3,28 +3,24 @@ package Tema6Prog.Practica_Objetos4.ArquilerPeliculas.entidades;
 public class ClientePrime extends Cliente {
 
     //Propiedades
-    private double precio;
+    private static final double PRECIO = 3;
 
     //Constructor
     public ClientePrime(String dni, String nombre, String email) {
         super(dni, nombre, email);
-        this.precio = 3;
+        setPrecioMensual(PRECIO);
     }
 
     // ****** METODOS ******
 
     @Override
     public boolean esPro() {
-        if (this.precio == 3) {
-            return false;
-        }
-        else
-            return true;
+       return false;
     }
 
 
     @Override
     public double getPrecioMensual() {
-        return 3;
+        return PRECIO;
     }
 }

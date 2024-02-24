@@ -15,10 +15,26 @@ public abstract class Cliente {
 
     //Constructor
 
+    /**
+     *
+     * Contructor parametrizado
+     * @param dni
+     * @param nombre
+     * @param email
+     */
     public Cliente(String dni, String nombre, String email) {
         this.dni = dni;
         this.nombre = nombre;
         this.email = email;
+    }
+
+    /**
+     * Constructor por defecto
+     */
+    public Cliente() {
+        this.dni ="23811761P";
+        this.nombre = "Julian";
+        this.email = "patata@gmail.com";
     }
 
     //Getters and Setters

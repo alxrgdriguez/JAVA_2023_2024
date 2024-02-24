@@ -51,10 +51,21 @@ public class Multimedia {
 
     //Getters and Setters
 
+    public long getAutoincremento(){
+        return autoincremento;
+    }
+
+    public void setAutoincremento(long autoincremento){
+        this.autoincremento = autoincremento;
+    }
+
     public long getCodigo() {
         return codigo;
     }
 
+    public void setCodigo(long codigo) {
+        this.codigo = codigo;
+    }
 
     public String getTitulo() {
         return titulo;
