@@ -33,20 +33,17 @@ public class PrimeVideo {
      */
     public double getGanancias() {
 
-        double totalganancias = 0;
+        double totalganancias = this.ganancias;
 
-        totalganancias = this.ganancias;
+        /*for (Cliente cliente : suscriptores) {
+            totalganancias += cliente.getPrecioMensual() * 12;
+        }*/
 
-        for (Cliente cliente : suscriptores) {
-            t
+        for (int i = 0; i < suscriptores.size(); i++){
+            totalganancias += suscriptores.get(i).getPrecioMensual() * 12;
         }
 
-
-
-
-
-
-        return ganancias;
+        return totalganancias;
     }
 
     //Metodos
