@@ -117,10 +117,17 @@ public class Multimedia {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        /*if (this == o){ return true;
+        if (o == null) return false;
         Multimedia that = (Multimedia) o;
-        return codigo == that.codigo;
+        return codigo == that.codigo;*/
+        Multimedia that = (Multimedia) o;
+        if(this.getTitulo() == that.getTitulo()){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 
     @Override

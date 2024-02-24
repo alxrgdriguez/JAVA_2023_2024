@@ -26,6 +26,8 @@ public class PrimeVideo {
         return catalogos;
     }
 
+    public ArrayList<Cliente> getSuscriptores() { return suscriptores; }
+
     /**
      * Devuelve las ganancias. A las ganancias generadas cuando los clientes ven multimedia
      * hay que sumarle las ganancias de los todos los suscriptores que haya (multiplicado por 12 meses).

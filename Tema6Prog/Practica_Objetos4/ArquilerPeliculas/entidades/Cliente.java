@@ -85,10 +85,16 @@ public abstract class Cliente {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        /*if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cliente cliente = (Cliente) o;
-        return Objects.equals(dni, cliente.dni);
+        return Objects.equals(dni, cliente.dni);*/
+        Cliente cliente = (Cliente) o;
+        if(this.getDni() == cliente.getDni()) {
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override
