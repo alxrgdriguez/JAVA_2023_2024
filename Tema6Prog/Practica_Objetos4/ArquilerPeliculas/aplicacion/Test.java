@@ -67,7 +67,7 @@ public class Test {
 
        for (int i =0; i < 10; i++){
            Serie s =new Serie("Serie " + i, true, 10, Genero.generoPeli.TERROR);
-            for (int j=0; j<2; j++){
+            for (int j=0; j<10; j++){
                 Temporada t = new Temporada(j);
 
                 for (int k=0; k<10; k++){
