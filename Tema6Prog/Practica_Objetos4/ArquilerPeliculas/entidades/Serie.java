@@ -39,4 +39,33 @@ public class Serie extends Multimedia {
         return sb.toString();
     }
 
+
+    //Metodos
+
+    /**
+     * Devuelve el total de temporadas
+     * @return
+     */
+    public int getNumeroTemporadas(){
+
+        return this.temporadas.size();
+    }
+
+    /**
+     * Metodo para añadir una temporada
+     * @param temporada
+     */
+    public void addTemporada(Temporada temporada){
+        temporada.setSerie(this);
+        this.temporadas.add(temporada);
+    }
+
+    /**
+     * Metodo para elimnar una temporada
+     * @param temporada
+     */
+    public void delTemporada(Temporada temporada){
+        this.temporadas.remove(temporada);
+    }
+
 }
