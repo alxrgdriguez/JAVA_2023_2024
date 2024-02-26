@@ -19,8 +19,6 @@ public class Test {
 
         PrimeVideo pv = new PrimeVideo();
 
-        /*ArrayList<Pelicula> peliculas = new ArrayList<>();
-        ArrayList<Cliente> clientes = new ArrayList<>();*/
 
 
         //No son plus
