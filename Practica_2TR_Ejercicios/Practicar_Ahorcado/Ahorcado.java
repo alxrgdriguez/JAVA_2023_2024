@@ -1,13 +1,14 @@
 package Practica_2TR_Ejercicios.Practicar_Ahorcado;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Ahorcado {
 
     //Propiedades
     public enum Palabras {conejo, ahorcado, pez, sol, gallina, patata}
 
-    private static final ArrayList<Palabras> palabras = new ArrayList<>();
+    private static final ArrayList<Palabras> palabras = new ArrayList<>(Arrays.asList(Palabras.values()));
 
     private String palabraAdivinar;
 
