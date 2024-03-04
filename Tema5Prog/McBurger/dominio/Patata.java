@@ -1,11 +1,8 @@
 package Tema5Prog.McBurger.dominio;
 
+import Tema5Prog.McBurger.interfaces.Cocinable;
 
-import interfaces.Cocinable;
-
-import static Tema5Prog.McBurger.interfaces.Cocinable.CRUDA;
-
-public class Patata extends Comida {
+public class Patata extends Comida implements Cocinable {
 
     //Propiedades
 
@@ -61,5 +58,8 @@ public class Patata extends Comida {
         this.setNombre("Patata.asada");
     }
 
-
+    @Override
+    public java.lang.String toString() {
+        return super.toString();
+    }
 }
