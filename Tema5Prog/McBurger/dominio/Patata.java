@@ -1,8 +1,11 @@
 package Tema5Prog.McBurger.dominio;
 
+
 import interfaces.Cocinable;
 
-public class Patata extends Comida implements Cocinable {
+import static Tema5Prog.McBurger.interfaces.Cocinable.CRUDA;
+
+public class Patata extends Comida {
 
     //Propiedades
 
