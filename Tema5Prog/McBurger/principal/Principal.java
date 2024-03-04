@@ -1,4 +1,7 @@
 package Tema5Prog.McBurger.principal;
+
+import Tema5Prog.McBurger.dominio.*;
+
 public class Principal {
 
 	public static void main(String[] args) {
