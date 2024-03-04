@@ -1,9 +1,4 @@
-package Tema5Prog.McBurger.testMenu;
-
-import Tema5Prog.McBurger.dominio.Menu;
-import Tema5Prog.McBurger.interfaces.Cocinable;
-import Tema5Prog.McBurger.dominio.*;
-
+package Tema5Prog.McBurger.principal;
 public class Principal {
 
 	public static void main(String[] args) {
@@ -12,9 +7,9 @@ public class Principal {
 		// Crear ingredientes
 		// ***************************************************************
 
-		Hamburguesa h1 = new Hamburguesa("2024-02-16");
-		Hamburguesa h2 = new Hamburguesa("2024-02-19");
-		Hamburguesa h3 = new Hamburguesa("2024-02-17");
+		Hamburguesa h1 = new Hamburguesa("26/04/2022");
+		Hamburguesa h2 = new Hamburguesa("27/04/2022");
+		Hamburguesa h3 = new Hamburguesa("07/05/2022");
 
 		Patata p1 = new Patata();
 		Patata p2 = new Patata();
